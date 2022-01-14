@@ -1,23 +1,16 @@
 @use "../abstracts";
-@use "../components";
 
 .principal{
-    height: auto;
-    width: 100%;
-    margin-left: 3%;
+    @include abstracts.widthHeight(100%, auto);
     margin-top: 20px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column; 
     
     @media (min-width: 768px) and (max-width: 1366px){
-        width: 100%;
-        margin-left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        height: auto;
+        @include abstracts.widthHeight(100%, auto);
+        @include abstracts.flex(flex, space-evenly, center, wrap, 0);
+        margin-left: 0;   
     }
   
     & > p{
@@ -31,8 +24,7 @@
         &::before{
         content: "";
         display: block;
-        width: 40px;
-        height: 50px;
+        @include abstracts.widthHeight(40px, 50px);
         background-color: transparent;
         border-bottom: 4px solid abstracts.$color-tertiary;
         position: absolute;
@@ -41,15 +33,10 @@
         }
     }
     .entrees, .plats, .desserts{
-        width: 100%;
-        display: flex;
-        
-        justify-content: space-evenly;
-        align-items: center;
+        @include abstracts.widthHeight(100%, auto);
+        @include abstracts.flex(flex, space-evenly, center, nowrap, column);
         margin-bottom: 25px;
         margin-top: 20px;
-        flex-direction: column;
-        height: auto;
         flex-wrap: nowrap;
     }
     .entrees{
@@ -66,15 +53,12 @@
     }
     
     & .plat{
-        height: 60px;
-        width: 350px;
+        @include abstracts.widthHeight(92%, 60px);
+        @include abstracts.flex(flex, space-between, 0, 0, column);
         background-color: white;
         border-radius: 1rem;
         overflow: hidden;
         line-height: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         box-shadow: -1px 2px 12px 8px rgba(229,229,229,0.75);
         margin-bottom: 15px;
         

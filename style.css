@@ -593,39 +593,9 @@ section a.palette::after, section a.note::after {
   object-position: 0 -143px;
 }
 
-@keyframes check_translate {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-58px);
-  }
-}
-@keyframes check_rotate {
-  0% {
-    transform: rotateZ(0turn);
-  }
-  100% {
-    transform: rotateZ(2turn);
-  }
-}
-@keyframes decalage_plats {
-  10% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .principal {
-  height: auto;
   width: 100%;
-  margin-left: 3%;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 25px;
   display: flex;
@@ -634,12 +604,13 @@ section a.palette::after, section a.note::after {
 @media (min-width: 768px) and (max-width: 1366px) {
   .principal {
     width: 100%;
-    margin-left: 0;
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: auto;
+    flex-wrap: wrap;
+    flex-direction: 0;
+    margin-left: 0;
   }
 }
 .principal > p {
@@ -664,13 +635,14 @@ section a.palette::after, section a.note::after {
 }
 .principal .entrees, .principal .plats, .principal .desserts {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
   margin-bottom: 25px;
   margin-top: 20px;
-  flex-direction: column;
-  height: auto;
   flex-wrap: nowrap;
 }
 .principal .entrees {
@@ -686,15 +658,17 @@ section a.palette::after, section a.note::after {
   animation: decalage_plats 2s 1s linear both;
 }
 .principal .plat {
+  width: 92%;
   height: 60px;
-  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: 0;
+  flex-wrap: 0;
+  flex-direction: column;
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
   line-height: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   box-shadow: -1px 2px 12px 8px rgba(229, 229, 229, 0.75);
   margin-bottom: 15px;
 }
@@ -942,6 +916,36 @@ footer .footer__mail {
     line-height: 4vmin;
     width: 20%;
     height: 4vmin;
+  }
+}
+
+@keyframes check_translate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-58px);
+  }
+}
+@keyframes check_rotate {
+  0% {
+    transform: rotateZ(0turn);
+  }
+  100% {
+    transform: rotateZ(2turn);
+  }
+}
+@keyframes decalage_plats {
+  10% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 

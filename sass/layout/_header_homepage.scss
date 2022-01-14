@@ -1,0 +1,63 @@
+@use "../abstracts";
+
+.header__title--accueil{
+  width: 100%;
+  font-family: abstracts.$titre;
+  text-align: center;
+  color: abstracts.$color-black;
+  background-color: abstracts.$color-white;
+  line-height: 70px;
+  animation: slide-in-top 0.8s 2s ease-out both; 
+}
+@keyframes slide-in-top {
+    0% {
+      
+    transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+.header__button{
+  @include abstracts.bouton;
+  width: 250px;
+
+}
+.header-button{
+text-decoration: none;
+}
+
+header{
+  @include abstracts.flex(flex, center, center, wrap, column); 
+  padding-bottom: 15vmin; 
+  
+  .local{
+    @include abstracts.flex(flex, center, center, 0, 0); 
+    @include abstracts.widthHeight(100%, 70px);
+    background-color: abstracts.$color-background2; 
+  }
+  span img{
+    @include abstracts.widthHeight(2rem, 2rem);
+    margin-right: 4rem;  
+  }
+  .local p{
+      position: relative;
+      line-height: 60px;    
+  }
+  & h2{ 
+    font-size: 2.6rem;
+    width: 70%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  & h3{
+    width: 88%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.7rem;
+  }
+}

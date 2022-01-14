@@ -1,0 +1,96 @@
+
+@use "../abstracts";
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: abstracts.$policeSite;
+    font-size: 2rem;
+    background-color: abstracts.$color-white;
+    display: flex;
+    flex-direction: column;
+    @include abstracts.widthHeight(100%, auto);
+    z-index: 0;
+}
+main{
+    @include abstracts.flex(flex, center, center, wrap, column);
+    @include abstracts.widthHeight(100%, auto);
+    flex: 1; 
+}
+    
+aside{
+    @include abstracts.widthHeight(100%, auto);
+    @include abstracts.flex(flex, flex-start, center, 0, column);
+    margin-bottom: 50px;
+    background-color: abstracts.$color-white;
+    
+    & h2{
+        text-align: left;
+        font-size: 2.3rem;
+        width: 85%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .aside__choice{
+        &::before{
+            content: "1";
+            
+        } 
+    }
+    .aside__compose{
+        &::before{
+            content: "2";
+        }
+    }
+    .aside__taste{
+        &::before{
+            content: "3";
+        }
+    }
+    & a{
+        text-decoration: none;
+        color: black;
+        width: 87%;
+        font-size: 1.6rem;
+    }
+}     
+.aside__box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: abstracts.$color-background2;
+    padding: 2.5rem;
+    border-radius: 3rem;  
+    box-shadow: 0px 9px 12px -2px abstracts.$color-background2;
+    margin-bottom: 2rem;
+    position: relative;
+    
+    &:hover{
+        background-color: abstracts.$color-primary-light;
+        color: abstracts.$color-secondary;
+        }
+        &::before{
+        @include abstracts.dimensionPosition(3rem, 3rem, absolute, 32%, 26px, 0, -10px);
+        background-color: abstracts.$color-secondary;
+        color: abstracts.$color-white;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 3rem;
+        }
+    & p{
+        color: abstracts.$color-black;
+        font-weight: bold;
+    }
+    .aside__icons{
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 20px;
+  }
+}
+  
+
+  
+
+    

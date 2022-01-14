@@ -55,6 +55,11 @@ header {
   flex-direction: column;
   padding-bottom: 15vmin;
 }
+@media (min-width: 992px) {
+  header {
+    padding-bottom: 5vmin;
+  }
+}
 header .local {
   display: flex;
   justify-content: center;
@@ -293,6 +298,7 @@ section > h3 {
 @media (min-width: 992px) {
   section > h3 {
     text-align: center;
+    margin-bottom: 0;
   }
 }
 
@@ -451,8 +457,9 @@ footer {
   flex-wrap: nowrap;
   flex-direction: column;
   height: auto;
+  font-size: 1.3vmax;
   padding: 2rem;
-  line-height: 3rem;
+  line-height: 4min;
   background-color: #353535;
   color: #fff;
   width: 100%;
@@ -469,7 +476,7 @@ footer {
 @media (min-width: 992px) {
   footer {
     display: 0;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -478,12 +485,19 @@ footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-size: 4rem;
+  width: 20%;
+  text-align: left;
+}
+footer a {
+  text-decoration: none;
 }
 footer .footer__ustensile {
   display: flex;
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
+  width: 23%;
+  height: 4vmin;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   footer .footer__ustensile {
@@ -492,36 +506,74 @@ footer .footer__ustensile {
 }
 @media (min-width: 992px) {
   footer .footer__ustensile {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 footer .footer__ustensile p {
   margin-left: 2rem;
+  color: white;
+  line-height: 4vmin;
 }
 footer .footer__ustensile i {
-  line-height: 3rem;
+  line-height: 4vmin;
 }
 footer .footer__partenaire {
   display: flex;
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
+  width: 20%;
+  height: 4vmin;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   footer .footer__partenaire {
     justify-content: center;
   }
 }
+@media (min-width: 992px) {
+  footer .footer__partenaire {
+    justify-content: flex-start;
+  }
+}
 footer .footer__partenaire p {
   margin-left: 2rem;
+  color: white;
+  line-height: 4vmin;
 }
 footer .footer__partenaire i {
-  line-height: 3rem;
+  line-height: 4vmin;
   font-size: 1.4rem;
 }
-footer p, footer .mail {
-  text-decoration: none;
+footer .footer__mention {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 80%;
+  justify-content: flex-start;
+  width: 16%;
+  height: 4vmin;
   color: white;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  footer .footer__mention {
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__mention {
+    justify-content: flex-start;
+    line-height: 4vmin;
+  }
+}
+footer .footer__mail {
+  width: 20%;
+  height: 4vmin;
+  color: white;
+}
+@media (min-width: 992px) {
+  footer .footer__mail {
+    text-align: left;
+    line-height: 4vmin;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

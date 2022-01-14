@@ -34,7 +34,9 @@ text-decoration: none;
 header{
   @include abstracts.flex(flex, center, center, wrap, column); 
   padding-bottom: 15vmin; 
-  
+  @media (min-width: 992px){
+    padding-bottom: 5vmin;
+  }
   .local{
     @include abstracts.flex(flex, center, center, 0, 0); 
     @include abstracts.widthHeight(100%, 70px);

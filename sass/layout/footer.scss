@@ -3,8 +3,9 @@
 footer{
     @include abstracts.flex(flex, start, flex-start, nowrap, column);
     height: auto;
+    font-size: 1.3vmax;
     padding: 2rem;
-    line-height: 3rem; 
+    line-height: 4min; 
     background-color: abstracts.$color-grey;
     color: abstracts.$color-white;
     width: 100%;
@@ -12,44 +13,79 @@ footer{
             @include abstracts.flex(0, center, center, nowrap, column);
         }
         @media (min-width: 992px){
-            @include abstracts.flex(0, space-evenly, center, nowrap, row);
+            @include abstracts.flex(0, center, center, nowrap, row);
         }
     & h2{
         font-family: abstracts.$titre;
         font-size: 4rem;
+        width: 20%;
+        text-align: left;
+    }
+    & a{
+        text-decoration: none;
+        
     }
     .footer__ustensile{
         @include abstracts.footer;
+        width: 23%;
+        height: 4vmin;
             @media (min-width: 768px) and (max-width: 992px){
                 justify-content: center;
             }
             @media (min-width: 992px){
-                justify-content: center;
+                justify-content: flex-start;
             }
         & p{
             margin-left: 2rem;
+            color: white;
+            line-height: 4vmin;
         }
         & i{
-            line-height: 3rem;
+            line-height: 4vmin;
         }
     }
     .footer__partenaire{
         @include abstracts.footer;
+        width: 20%;
+        height: 4vmin;
             @media (min-width: 768px) and (max-width: 992px){
                 justify-content: center;
             }
             @media (min-width: 992px){
+                justify-content: flex-start;
             }
+            
         & p{
             margin-left: 2rem;
+            color: white;
+            line-height: 4vmin;
         }
         & i{
-            line-height: 3rem;
+            line-height: 4vmin;
             font-size: 1.4rem;
         }
     }
-   & p, .mail{
-        text-decoration: none;
+    .footer__mention{
+        @include abstracts.footer;
+        width: 16%;
+        height: 4vmin;
         color: white;
+        @media (min-width: 768px) and (max-width: 992px){
+            justify-content: center;
+        }
+        @media (min-width: 992px){
+            justify-content: flex-start;
+            line-height: 4vmin;
+        }
+    }
+   .footer__mail {
+        width: 20%;
+        height: 4vmin;
+        color: white;
+        @media (min-width: 992px){
+            text-align: left;
+            line-height: 4vmin;
+        }
     } 
+
   }

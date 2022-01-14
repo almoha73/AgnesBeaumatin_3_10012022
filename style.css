@@ -789,7 +789,7 @@ footer {
   flex-wrap: nowrap;
   flex-direction: column;
   height: auto;
-  font-size: 1.3vmax;
+  font-size: 2vmax;
   padding: 2rem;
   line-height: 4min;
   background-color: #353535;
@@ -828,8 +828,8 @@ footer .footer__ustensile {
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
-  width: 23%;
-  height: 4vmin;
+  height: 3vmax;
+  line-height: 3vmax;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   footer .footer__ustensile {
@@ -839,11 +839,13 @@ footer .footer__ustensile {
 @media (min-width: 992px) {
   footer .footer__ustensile {
     justify-content: flex-start;
+    width: 23%;
+    height: 4vmin;
   }
 }
 footer .footer__ustensile p {
   margin-left: 2rem;
-  color: white;
+  color: #fff;
   line-height: 4vmin;
 }
 footer .footer__ustensile i {
@@ -854,8 +856,8 @@ footer .footer__partenaire {
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
-  width: 20%;
-  height: 4vmin;
+  height: 3vmax;
+  line-height: 3vmax;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   footer .footer__partenaire {
@@ -865,24 +867,26 @@ footer .footer__partenaire {
 @media (min-width: 992px) {
   footer .footer__partenaire {
     justify-content: flex-start;
+    width: 20%;
+    height: 4vmin;
   }
 }
 footer .footer__partenaire p {
   margin-left: 2rem;
-  color: white;
+  color: #fff;
   line-height: 4vmin;
 }
 footer .footer__partenaire i {
   line-height: 4vmin;
-  font-size: 1.4rem;
+  font-size: 3vmin;
 }
 footer .footer__mention {
   display: flex;
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
-  width: 16%;
-  height: 4vmin;
+  height: 3vmax;
+  line-height: 3vmax;
   color: white;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -894,17 +898,21 @@ footer .footer__mention {
   footer .footer__mention {
     justify-content: flex-start;
     line-height: 4vmin;
+    width: 16%;
+    height: 4vmin;
   }
 }
 footer .footer__mail {
-  width: 20%;
-  height: 4vmin;
-  color: white;
+  color: #fff;
+  height: 3vmax;
+  line-height: 3vmax;
 }
 @media (min-width: 992px) {
   footer .footer__mail {
     text-align: left;
     line-height: 4vmin;
+    width: 20%;
+    height: 4vmin;
   }
 }
 

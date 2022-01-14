@@ -593,6 +593,35 @@ section a.palette::after, section a.note::after {
   object-position: 0 -143px;
 }
 
+@keyframes check_translate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-58px);
+  }
+}
+@keyframes check_rotate {
+  0% {
+    transform: rotateZ(0turn);
+  }
+  100% {
+    transform: rotateZ(2turn);
+  }
+}
+@keyframes decalage_plats {
+  10% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .principal {
   height: auto;
   width: 100%;

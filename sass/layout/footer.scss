@@ -22,8 +22,7 @@ footer{
         text-align: left;
     }
     & a{
-        text-decoration: none;
-        
+        text-decoration: none;   
     }
     .footer__ustensile{
         @include abstracts.footer;
@@ -88,6 +87,7 @@ footer{
         color: abstracts.$color-white;
         height: 3vmax;
         line-height: 3vmax;
+        
         @media (min-width: 992px){
             text-align: left;
             line-height: 4vmin;

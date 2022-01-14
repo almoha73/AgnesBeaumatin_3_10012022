@@ -10,6 +10,7 @@ body{
     background-color: abstracts.$color-white;
     display: flex;
     flex-direction: column;
+    align-items: center;
     @include abstracts.widthHeight(100%, auto);
     z-index: 0;
 }
@@ -17,6 +18,10 @@ main{
     @include abstracts.flex(flex, center, center, wrap, column);
     @include abstracts.widthHeight(100%, auto);
     flex: 1; 
+    @media (min-width: 992px){
+        @include abstracts.widthHeight(90%, auto);
+        @include abstracts.flex(flex, space-between, center, wrap, row);
+    }
 }
     
 aside{
@@ -24,7 +29,12 @@ aside{
     @include abstracts.flex(flex, flex-start, center, 0, column);
     margin-bottom: 50px;
     background-color: abstracts.$color-white;
-    
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.widthHeight(60%, auto);
+        }
+        @media (min-width: 992px){
+            @include abstracts.widthHeight(30%, auto);
+        }
     & h2{
         text-align: left;
         font-size: 2.3rem;
@@ -51,7 +61,7 @@ aside{
     }
     & a{
         text-decoration: none;
-        color: black;
+        color: abstracts.$color-black;
         width: 87%;
         font-size: 1.6rem;
     }
@@ -66,7 +76,13 @@ aside{
     box-shadow: 0px 9px 12px -2px abstracts.$color-background2;
     margin-bottom: 2rem;
     position: relative;
-    
+    @media (min-width: 768px) and (max-width: 992px){
+        padding: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    @media (min-width: 992px){
+        margin-bottom: 3vmax;
+    }
     &:hover{
         background-color: abstracts.$color-primary-light;
         color: abstracts.$color-secondary;

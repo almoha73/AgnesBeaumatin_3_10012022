@@ -44,21 +44,32 @@
 @mixin heartMenu{
     position: relative;
     &--border{
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 7vmin;
+      height: 7vmin;
       position: absolute;
       bottom: 1vmax;
       right: 1vmin;
-      
+        @media (min-width: 768px) and (max-width: 992px){
+            @include widthHeight(4vmin, 4vmin); 
+        }
+        @media (min-width: 992px){
+            @include widthHeight(2.5vmax, 2.5vmax); 
+        }
     }
     &--solid{
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 7vmin;
+      height: 7vmin;
       opacity: 0;
       position: absolute;
       bottom: 1vmax;
       right: 1vmin;
       transform: scale(1);
+        @media (min-width: 768px) and (max-width: 992px){
+            @include widthHeight(4vmin, 4vmin); 
+        }
+        @media (min-width: 992px){
+            @include widthHeight(2.5vmax, 2.5vmax); 
+          }
       &:hover{
         opacity: 1;
         transition:  600ms 150ms linear ;

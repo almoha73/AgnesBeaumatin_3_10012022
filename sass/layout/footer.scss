@@ -8,13 +8,24 @@ footer{
     background-color: abstracts.$color-grey;
     color: abstracts.$color-white;
     width: 100%;
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.flex(0, center, center, nowrap, column);
+        }
+        @media (min-width: 992px){
+            @include abstracts.flex(0, space-evenly, center, nowrap, row);
+        }
     & h2{
         font-family: abstracts.$titre;
         font-size: 4rem;
     }
     .footer__ustensile{
         @include abstracts.footer;
-        
+            @media (min-width: 768px) and (max-width: 992px){
+                justify-content: center;
+            }
+            @media (min-width: 992px){
+                justify-content: center;
+            }
         & p{
             margin-left: 2rem;
         }
@@ -24,6 +35,11 @@ footer{
     }
     .footer__partenaire{
         @include abstracts.footer;
+            @media (min-width: 768px) and (max-width: 992px){
+                justify-content: center;
+            }
+            @media (min-width: 992px){
+            }
         & p{
             margin-left: 2rem;
         }

@@ -2,8 +2,17 @@
    
 section{
     @include abstracts.widthHeight(100%, auto);
-   @include abstracts.flex(flex, space-between, center, wrap, column);
+    @include abstracts.flex(flex, flex-start, center, wrap, column);
     padding: 20px;
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.flex(flex, center, center, wrap, row);
+            gap: 2vmax;
+        }
+        @media (min-width: 992px){
+            @include abstracts.flex(flex, center, center, wrap, row);
+            gap: 2vmax;
+            @include abstracts.widthHeight(65%, auto);
+        } 
     & a{
         @include abstracts.widthHeight(100%, 55vmin);
         text-decoration: none;
@@ -11,19 +20,40 @@ section{
         display: block;
         flex-direction: column;
         margin-bottom: 20px;
+            @media (min-width: 768px) and (max-width: 992px){
+                @include abstracts.widthHeight(45%, 50%); 
+            }
+            @media (min-width: 992px){
+                @include abstracts.widthHeight(45%, 20vmax);
+            }
+            
+        & img{
+            @media (min-width: 768px) and (max-width: 992px){
+                @include abstracts.widthHeight(100%, 100%); 
+            }   
+        }
     } 
     & > h3{
         align-items: flex-start;
         width: 100%;
         margin-bottom: 20px;
+        @media (min-width: 768px) and (max-width: 992px){
+            width: 92%;
+        }
+        @media (min-width: 992px){
+            text-align: center;
+        }
     }
 }
 
 .restaurant-card{
     @include abstracts.widthHeight(100%, 100%);
     border-radius: 1rem;
-    box-shadow: -1px 2px 12px 8px #e5e5e5bf;
+    box-shadow: -1px 2px 12px 8px #e5e5e5e5;
     position: relative;
+    @media (min-width: 768px) and (max-width: 992px){
+        @include abstracts.widthHeight(100%, 35vmin);
+    }
     &:hover{
     box-shadow: -1px 2px 08px 4px abstracts.$color-secondary;
     transform: scale(1.01);
@@ -38,15 +68,34 @@ section{
     border-radius: 0 0 1rem 1rem;
     padding-top: 1vmax;  
     padding-bottom: 1vmax;
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.widthHeight(100%, 12%);
+            bottom: 6.5vmax;    
+        }
+        @media (min-width: 992px){
+            @include abstracts.widthHeight(100%, 4.5vmax);
+            bottom: 4.5vmax;
+        }
     & h3, & p{
       font-size: 3.5vmin;
       padding-left: 2vmin;
-      line-height: 2rem;
-      
+      line-height: 6vmin;
+      @media (min-width: 768px) and (max-width: 992px){
+          font-size: 2vmin;
+          line-height: 2.5vmin;
+      }
+      @media (min-width: 992px){
+        @include abstracts.widthHeight(100%, 70%);
+        font-size: 1.5vmax;
+        line-height: 70%;
+        padding-left: 2vmin;
+    }
     }
     .restaurant-card__heart{
       @include abstracts.heartMenu;
-      margin-right: 30px;
+      margin-right: 4vmin;
+      bottom: 0.2vmax;
+      
     }
     
 }
@@ -55,16 +104,24 @@ section a.palette, section a.note{
     position: relative;
     &::after{
       content: "Nouveau";
-      font-size: 1.5vmax;
+      font-size: 4vmin;
       @include abstracts.widthHeight(25%, 12%);
       background-color:abstracts.$color-tertiary;
       position: absolute;
-      line-height: 2.5vmax;
+      line-height: 6vmin;
       text-align: center;
       color: abstracts.$color-tertiary-dark;
       bottom: 82%;
       z-index: 2;
       right: 4%;
+      @media (min-width: 768px) and (max-width: 992px){
+           font-size: 2vmin;
+           line-height: 4vmin;
+      }
+      @media (min-width: 992px){
+          font-size: 1.3vmax;
+          line-height: 2.5vmax;
+      }
     } 
 }
 .note{

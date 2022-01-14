@@ -97,6 +97,7 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
   z-index: 0;
@@ -112,6 +113,17 @@ main {
   height: auto;
   flex: 1;
 }
+@media (min-width: 992px) {
+  main {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
 
 aside {
   width: 100%;
@@ -123,6 +135,18 @@ aside {
   flex-direction: column;
   margin-bottom: 50px;
   background-color: #fff;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  aside {
+    width: 60%;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+  aside {
+    width: 30%;
+    height: auto;
+  }
 }
 aside h2 {
   text-align: left;
@@ -142,7 +166,7 @@ aside .aside__taste::before {
 }
 aside a {
   text-decoration: none;
-  color: black;
+  color: #000;
   width: 87%;
   font-size: 1.6rem;
 }
@@ -157,6 +181,17 @@ aside a {
   box-shadow: 0px 9px 12px -2px #eaeaea;
   margin-bottom: 2rem;
   position: relative;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .aside__box {
+    padding: 3.5rem;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .aside__box {
+    margin-bottom: 3vmax;
+  }
 }
 .aside__box:hover {
   background-color: #f5edff;
@@ -190,11 +225,33 @@ section {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 20px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2vmax;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2vmax;
+    width: 65%;
+    height: auto;
+  }
 }
 section a {
   width: 100%;
@@ -205,18 +262,52 @@ section a {
   flex-direction: column;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section a {
+    width: 45%;
+    height: 50%;
+  }
+}
+@media (min-width: 992px) {
+  section a {
+    width: 45%;
+    height: 20vmax;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section a img {
+    width: 100%;
+    height: 100%;
+  }
+}
 section > h3 {
   align-items: flex-start;
   width: 100%;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section > h3 {
+    width: 92%;
+  }
+}
+@media (min-width: 992px) {
+  section > h3 {
+    text-align: center;
+  }
 }
 
 .restaurant-card {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  box-shadow: -1px 2px 12px 8px #e5e5e5bf;
+  box-shadow: -1px 2px 12px 8px #e5e5e5e5;
   position: relative;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant-card {
+    width: 100%;
+    height: 35vmin;
+  }
 }
 .restaurant-card:hover {
   box-shadow: -1px 2px 8px 4px #9356dc;
@@ -233,30 +324,84 @@ section > h3 {
   padding-top: 1vmax;
   padding-bottom: 1vmax;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant-card__text {
+    width: 100%;
+    height: 12%;
+    bottom: 6.5vmax;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-card__text {
+    width: 100%;
+    height: 4.5vmax;
+    bottom: 4.5vmax;
+  }
+}
 .restaurant-card__text h3, .restaurant-card__text p {
   font-size: 3.5vmin;
   padding-left: 2vmin;
-  line-height: 2rem;
+  line-height: 6vmin;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant-card__text h3, .restaurant-card__text p {
+    font-size: 2vmin;
+    line-height: 2.5vmin;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-card__text h3, .restaurant-card__text p {
+    width: 100%;
+    height: 70%;
+    font-size: 1.5vmax;
+    line-height: 70%;
+    padding-left: 2vmin;
+  }
 }
 .restaurant-card__text .restaurant-card__heart {
   position: relative;
-  margin-right: 30px;
+  margin-right: 4vmin;
+  bottom: 0.2vmax;
 }
 .restaurant-card__text .restaurant-card__heart--border {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 7vmin;
+  height: 7vmin;
   position: absolute;
   bottom: 1vmax;
   right: 1vmin;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant-card__text .restaurant-card__heart--border {
+    width: 4vmin;
+    height: 4vmin;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-card__text .restaurant-card__heart--border {
+    width: 2.5vmax;
+    height: 2.5vmax;
+  }
+}
 .restaurant-card__text .restaurant-card__heart--solid {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 7vmin;
+  height: 7vmin;
   opacity: 0;
   position: absolute;
   bottom: 1vmax;
   right: 1vmin;
   transform: scale(1);
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant-card__text .restaurant-card__heart--solid {
+    width: 4vmin;
+    height: 4vmin;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-card__text .restaurant-card__heart--solid {
+    width: 2.5vmax;
+    height: 2.5vmax;
+  }
 }
 .restaurant-card__text .restaurant-card__heart--solid:hover {
   opacity: 1;
@@ -269,17 +414,29 @@ section a.palette, section a.note {
 }
 section a.palette::after, section a.note::after {
   content: "Nouveau";
-  font-size: 1.5vmax;
+  font-size: 4vmin;
   width: 25%;
   height: 12%;
   background-color: #99e2d0;
   position: absolute;
-  line-height: 2.5vmax;
+  line-height: 6vmin;
   text-align: center;
   color: #008766;
   bottom: 82%;
   z-index: 2;
   right: 4%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section a.palette::after, section a.note::after {
+    font-size: 2vmin;
+    line-height: 4vmin;
+  }
+}
+@media (min-width: 992px) {
+  section a.palette::after, section a.note::after {
+    font-size: 1.3vmax;
+    line-height: 2.5vmax;
+  }
 }
 
 .note {
@@ -300,6 +457,24 @@ footer {
   color: #fff;
   width: 100%;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  footer {
+    display: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    display: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-size: 4rem;
@@ -309,6 +484,16 @@ footer .footer__ustensile {
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  footer .footer__ustensile {
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__ustensile {
+    justify-content: center;
+  }
 }
 footer .footer__ustensile p {
   margin-left: 2rem;
@@ -321,6 +506,11 @@ footer .footer__partenaire {
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  footer .footer__partenaire {
+    justify-content: center;
+  }
 }
 footer .footer__partenaire p {
   margin-left: 2rem;

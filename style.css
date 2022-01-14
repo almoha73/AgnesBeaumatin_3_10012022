@@ -593,6 +593,195 @@ section a.palette::after, section a.note::after {
   object-position: 0 -143px;
 }
 
+.principal {
+  height: auto;
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  .principal {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+  }
+}
+.principal > p {
+  position: relative;
+  width: 82%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .principal > p {
+    margin-left: 30px;
+  }
+}
+.principal > p::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 50px;
+  background-color: transparent;
+  border-bottom: 4px solid #99e2d0;
+  position: absolute;
+  bottom: -8px;
+}
+.principal .entrees, .principal .plats, .principal .desserts {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  flex-direction: column;
+  height: auto;
+  flex-wrap: nowrap;
+}
+.principal .entrees {
+  animation: decalage_plats 2s 100ms linear both;
+  opacity: 0;
+}
+.principal .plats {
+  opacity: 0;
+  animation: decalage_plats 2s 500ms linear both;
+}
+.principal .desserts {
+  opacity: 0;
+  animation: decalage_plats 2s 1s linear both;
+}
+.principal .plat {
+  height: 60px;
+  width: 350px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -1px 2px 12px 8px rgba(229, 229, 229, 0.75);
+  margin-bottom: 15px;
+}
+.principal .plat > p {
+  margin-left: 20px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.principal .plat .plat__ingredient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.principal .plat .plat__ingredient p {
+  font-size: 14px;
+  background-color: white;
+  margin-left: 20px;
+}
+.principal .plat .plat__ingredient span {
+  width: 40px;
+  height: 31px;
+  background-color: white;
+  display: block;
+  position: relative;
+  right: 15px;
+  padding-right: 0px;
+  text-align: center;
+  font-weight: bold;
+}
+.principal .plat .plat__ingredient span::before {
+  content: "...";
+  display: block;
+  position: absolute;
+  right: 40px;
+  width: 52px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: left;
+  opacity: 0;
+  background-color: white;
+}
+.principal .plat .plat__ingredient:hover span {
+  animation: check_translate 0.3s linear both;
+}
+.principal .plat .plat__ingredient:hover span::before {
+  opacity: 1;
+}
+.principal .plat .plat__ingredient:hover .suspension__none::before {
+  opacity: 0;
+}
+.principal .plat .check {
+  width: 58px;
+  height: 67px;
+  background-color: #99e2d0;
+  line-height: 67px;
+  text-align: center;
+  border-radius: 0 1rem 1rem 0;
+  opacity: 1;
+  position: relative;
+  left: 350px;
+  bottom: 62px;
+}
+.principal .plat .check .fas {
+  color: #99e2d0;
+  background-color: white;
+  font-size: 15px;
+  width: 25px;
+  height: 25px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px;
+  animation-name: ckeck_rotate;
+  animation-duration: 1s;
+}
+.principal .plat:hover .check {
+  animation: check_translate 0.3s linear both;
+  opacity: 1;
+}
+.principal .plat:hover .check div .fas {
+  animation: check_rotate 0.3s linear both;
+}
+.principal .lanote__entree {
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .principal .lanote__entree {
+    height: 60px;
+  }
+}
+.principal .lanote {
+  height: auto;
+}
+@media (max-width: 768px) {
+  .principal .lanote {
+    height: auto;
+  }
+}
+.principal .header__button--menu {
+  padding: 15px;
+  border-radius: 2rem;
+  border-color: transparent;
+  background: linear-gradient(#ff79d4 0%, #9356dc 100%);
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0px 3px 12px -2px #9356dc;
+  width: 200px;
+  margin-top: 100px;
+  text-align: center;
+  margin: auto;
+}
+.principal .header__button--menu:hover {
+  opacity: 0.9;
+  box-shadow: 0px 5px 14px -2px #9356dc;
+}
+
 footer {
   display: flex;
   justify-content: start;

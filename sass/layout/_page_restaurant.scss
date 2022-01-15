@@ -2,11 +2,10 @@
 
 .principal{
     @include abstracts.widthHeight(100%, auto);
-    margin-top: 20px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column; 
-    
+    background-color: abstracts.$color-background;
     @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, auto);
         @include abstracts.flex(flex, space-evenly, center, wrap, 0);

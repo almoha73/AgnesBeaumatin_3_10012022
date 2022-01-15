@@ -102,19 +102,19 @@ header {
   width: 100%;
   height: 70px;
   position: relative;
-  background-color: white;
+  background-color: #fff;
 }
 .headermenu::before {
   content: "";
-  background-size: cover;
-  background-position: center;
   width: 100%;
   height: 25vmax;
   position: absolute;
   top: 70px;
-  left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
   opacity: 1;
 }
@@ -122,22 +122,17 @@ header {
   width: 50%;
   text-align: left;
   margin-left: 20%;
-  font-size: 50px;
+  font-size: 30px;
   margin-top: 10px;
+  line-height: 50px;
   font-family: "Shrikhand", cursive;
-}
-@media (max-width: 768px) {
-  .headermenu__title {
-    font-size: 30px;
-    line-height: 50px;
-  }
 }
 .headermenu .fa-arrow-left {
   font-size: 30px;
   line-height: 70px;
 }
 .headermenu a {
-  color: black;
+  color: #000;
 }
 
 .header__palette::before {
@@ -160,7 +155,7 @@ header {
   width: 100%;
   height: 5vmax;
   line-height: 5vmax;
-  margin-top: 200px;
+  margin-top: 45%;
   border-radius: 2rem 2rem 0 0;
   display: flex;
   justify-content: center;
@@ -227,14 +222,6 @@ header {
   opacity: 1;
   transition: 600ms 150ms linear;
   transform: scale(1.05);
-}
-.restaurant-menu__heart--border, .restaurant-menu__heart--solid {
-  width: 3vw;
-}
-@media (max-width: 768px) {
-  .restaurant-menu__heart--border, .restaurant-menu__heart--solid {
-    width: 2.5vmax;
-  }
 }
 
 html {
@@ -598,10 +585,10 @@ section a.palette::after, section a.note::after {
 .principal {
   width: 100%;
   height: auto;
-  margin-top: 20px;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
+  background-color: #f6f6f6;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .principal {

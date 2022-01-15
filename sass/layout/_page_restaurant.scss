@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column; 
     
-    @media (min-width: 768px) and (max-width: 1366px){
+    @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, auto);
         @include abstracts.flex(flex, space-evenly, center, wrap, 0);
         margin-left: 0;   
@@ -53,9 +53,9 @@
     }
     
     & .plat{
-        @include abstracts.widthHeight(92%, 60px);
+        @include abstracts.widthHeight(330px, 60px);
         @include abstracts.flex(flex, space-between, 0, 0, column);
-        background-color: white;
+        background-color: abstracts.$color-white;
         border-radius: 1rem;
         overflow: hidden;
         line-height: 25px;
@@ -69,20 +69,17 @@
         }
      
         & .plat__ingredient{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-  
+            @include abstracts.flex(flex, space-between, 0, 0, row);
             & p{
                 font-size: 14px;
-                background-color: white;
+                background-color: abstracts.$color-white;
                 margin-left: 20px;
             }
         
             & span{
                 width: 40px;
                 height: 31px;      
-                background-color: white; 
+                background-color: abstracts.$color-white; 
                 display: block;
                 position: relative;
                 right: 15px;
@@ -100,7 +97,7 @@
                     padding-left: 5px;
                     text-align: left;
                     opacity: 0;   
-                    background-color: white; 
+                    background-color: abstracts.$color-white; 
                 }
             }
      
@@ -121,17 +118,17 @@
         & .check{
             width: 58px;
             height: 67px; 
-            background-color: #99e2d0;
+            background-color: abstracts.$color-tertiary;
             line-height: 67px;
             text-align: center;
             border-radius: 0 1rem 1rem 0;
             opacity: 1;
             position: relative;
-            left: 350px;
+            left: 100%;
             bottom: 62px;
             & .fas{
-                color: #99e2d0;
-                background-color: white;
+                color: abstracts.$color-tertiary;
+                background-color: abstracts.$color-white;
                 font-size: 15px;
                 width: 25px;
                 height: 25px;

@@ -5,6 +5,7 @@ header{
 }
 .headermenu{
     display: flex;
+    justify-content: left;
     width: 100%;
     height: 70px;
     position: relative;
@@ -25,12 +26,13 @@ header{
     }
   
     &__title{
-        width: 90%;
-        text-align: center;
+        width: 50%;
+        text-align: left;
+        margin-left: 20%;
         font-size: 50px;   
         margin-top: 10px;
         font-family: abstracts.$titre;
-        @media (max-width: 420px){
+        @media (max-width: 768px){
             font-size: 30px;
             line-height: 50px;
            

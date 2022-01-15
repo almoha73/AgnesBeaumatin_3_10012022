@@ -98,6 +98,7 @@ header {
 
 .headermenu {
   display: flex;
+  justify-content: left;
   width: 100%;
   height: 70px;
   position: relative;
@@ -118,13 +119,14 @@ header {
   opacity: 1;
 }
 .headermenu__title {
-  width: 90%;
-  text-align: center;
+  width: 50%;
+  text-align: left;
+  margin-left: 20%;
   font-size: 50px;
   margin-top: 10px;
   font-family: "Shrikhand", cursive;
 }
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .headermenu__title {
     font-size: 30px;
     line-height: 50px;
@@ -601,7 +603,7 @@ section a.palette::after, section a.note::after {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .principal {
     width: 100%;
     height: auto;
@@ -658,14 +660,14 @@ section a.palette::after, section a.note::after {
   animation: decalage_plats 2s 1s linear both;
 }
 .principal .plat {
-  width: 92%;
+  width: 330px;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: 0;
   flex-wrap: 0;
   flex-direction: column;
-  background-color: white;
+  background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
   line-height: 25px;
@@ -679,18 +681,20 @@ section a.palette::after, section a.note::after {
 }
 .principal .plat .plat__ingredient {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: 0;
+  flex-wrap: 0;
+  flex-direction: row;
 }
 .principal .plat .plat__ingredient p {
   font-size: 14px;
-  background-color: white;
+  background-color: #fff;
   margin-left: 20px;
 }
 .principal .plat .plat__ingredient span {
   width: 40px;
   height: 31px;
-  background-color: white;
+  background-color: #fff;
   display: block;
   position: relative;
   right: 15px;
@@ -708,7 +712,7 @@ section a.palette::after, section a.note::after {
   padding-left: 5px;
   text-align: left;
   opacity: 0;
-  background-color: white;
+  background-color: #fff;
 }
 .principal .plat .plat__ingredient:hover span {
   animation: check_translate 0.3s linear both;
@@ -728,12 +732,12 @@ section a.palette::after, section a.note::after {
   border-radius: 0 1rem 1rem 0;
   opacity: 1;
   position: relative;
-  left: 350px;
+  left: 100%;
   bottom: 62px;
 }
 .principal .plat .check .fas {
   color: #99e2d0;
-  background-color: white;
+  background-color: #fff;
   font-size: 15px;
   width: 25px;
   height: 25px;

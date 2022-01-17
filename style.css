@@ -53,7 +53,6 @@ header {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-bottom: 15vmin;
 }
 @media (min-width: 992px) {
   header {
@@ -155,7 +154,7 @@ header {
   width: 100%;
   height: 5vmax;
   line-height: 5vmax;
-  margin-top: 45%;
+  margin-top: 51%;
   border-radius: 2rem 2rem 0 0;
   display: flex;
   justify-content: center;
@@ -234,7 +233,6 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   height: auto;
   z-index: 0;
@@ -586,6 +584,7 @@ section a.palette::after, section a.note::after {
   width: 100%;
   height: auto;
   margin-bottom: 25px;
+  padding-top: 15vmin;
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
@@ -665,6 +664,7 @@ section a.palette::after, section a.note::after {
   margin-left: 20px;
   margin-top: 5px;
   font-weight: bold;
+  font-size: 1.6vmax;
 }
 .principal .plat .plat__ingredient {
   display: flex;
@@ -674,7 +674,7 @@ section a.palette::after, section a.note::after {
   flex-direction: row;
 }
 .principal .plat .plat__ingredient p {
-  font-size: 14px;
+  font-size: 1.6vmax;
   background-color: #fff;
   margin-left: 20px;
 }

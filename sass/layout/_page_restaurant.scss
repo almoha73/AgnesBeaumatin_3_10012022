@@ -3,6 +3,7 @@
 .principal{
     @include abstracts.widthHeight(100%, auto);
     margin-bottom: 25px;
+    padding-top: 15vmin;
     display: flex;
     flex-direction: column; 
     background-color: abstracts.$color-background;
@@ -65,12 +66,13 @@
             margin-left: 20px;
             margin-top: 5px;
             font-weight: bold;
+            font-size: 1.6vmax;
         }
      
         & .plat__ingredient{
             @include abstracts.flex(flex, space-between, 0, 0, row);
             & p{
-                font-size: 14px;
+                font-size: 1.6vmax;
                 background-color: abstracts.$color-white;
                 margin-left: 20px;
             }

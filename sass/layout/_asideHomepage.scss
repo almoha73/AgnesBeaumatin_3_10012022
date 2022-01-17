@@ -10,7 +10,6 @@ body{
     background-color: abstracts.$color-white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     @include abstracts.widthHeight(100%, auto);
     z-index: 0;
 }

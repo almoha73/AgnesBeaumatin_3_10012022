@@ -1,25 +1,28 @@
 @use "../abstracts";
 
 footer{
-    @include abstracts.flex(flex, start, flex-start, nowrap, column);
+    @include abstracts.flex(flex, flex-start, flex-start, nowrap, column);
     height: auto;
+    padding-left: 3%;
     font-size: 2vmax;
-    padding: 2rem;
-    line-height: 4min; 
+    line-height: 7vmax; 
     background-color: abstracts.$color-grey;
     color: abstracts.$color-white;
     width: 100%;
         @media (min-width: 768px) and (max-width: 992px){
             @include abstracts.flex(0, center, center, nowrap, column);
+            padding-left: 0;
         }
         @media (min-width: 992px){
-            @include abstracts.flex(0, center, center, nowrap, row);
+            @include abstracts.flex(flex, center, center, nowrap, row);
+            font-size: 1.3vmax;
+            padding-left: 0;
         }
     & h2{
         font-family: abstracts.$titre;
-        font-size: 4rem;
+        font-size: 3vmax;
         width: 20%;
-        text-align: left;
+        text-align: center;
     }
     & a{
         text-decoration: none;   
@@ -32,9 +35,8 @@ footer{
                 justify-content: center;
             }
             @media (min-width: 992px){
-                justify-content: flex-start;
-                width: 23%;
-                height: 4vmin;
+                justify-content: center;
+                width: 20%;
             }
         & p{
             margin-left: 2rem;
@@ -53,7 +55,7 @@ footer{
                 justify-content: center;
             }
             @media (min-width: 992px){
-                justify-content: flex-start;
+                justify-content: center;
                 width: 20%;
                 height: 4vmin;
             }
@@ -65,7 +67,7 @@ footer{
         }
         & i{
             line-height: 4vmin;
-            font-size: 3vmin;
+            font-size: 2vmax;
         }
     }
     .footer__mention{
@@ -77,9 +79,9 @@ footer{
             justify-content: center;
         }
         @media (min-width: 992px){
-            justify-content: flex-start;
+            justify-content: center;
             line-height: 4vmin;
-            width: 16%;
+            width: 20%;
             height: 4vmin;
         }
     }
@@ -89,7 +91,7 @@ footer{
         line-height: 3vmax;
         
         @media (min-width: 992px){
-            text-align: left;
+            text-align: center;
             line-height: 4vmin;
             width: 20%;
             height: 4vmin;

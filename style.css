@@ -836,14 +836,14 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
 
 footer {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   flex-direction: column;
   height: auto;
+  padding-left: 3%;
   font-size: 2vmax;
-  padding: 2rem;
-  line-height: 4min;
+  line-height: 7vmax;
   background-color: #353535;
   color: #fff;
   width: 100%;
@@ -855,22 +855,25 @@ footer {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    padding-left: 0;
   }
 }
 @media (min-width: 992px) {
   footer {
-    display: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    font-size: 1.3vmax;
+    padding-left: 0;
   }
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 4rem;
+  font-size: 3vmax;
   width: 20%;
-  text-align: left;
+  text-align: center;
 }
 footer a {
   text-decoration: none;
@@ -890,9 +893,8 @@ footer .footer__ustensile {
 }
 @media (min-width: 992px) {
   footer .footer__ustensile {
-    justify-content: flex-start;
-    width: 23%;
-    height: 4vmin;
+    justify-content: center;
+    width: 20%;
   }
 }
 footer .footer__ustensile p {
@@ -918,7 +920,7 @@ footer .footer__partenaire {
 }
 @media (min-width: 992px) {
   footer .footer__partenaire {
-    justify-content: flex-start;
+    justify-content: center;
     width: 20%;
     height: 4vmin;
   }
@@ -930,7 +932,7 @@ footer .footer__partenaire p {
 }
 footer .footer__partenaire i {
   line-height: 4vmin;
-  font-size: 3vmin;
+  font-size: 2vmax;
 }
 footer .footer__mention {
   display: flex;
@@ -948,9 +950,9 @@ footer .footer__mention {
 }
 @media (min-width: 992px) {
   footer .footer__mention {
-    justify-content: flex-start;
+    justify-content: center;
     line-height: 4vmin;
-    width: 16%;
+    width: 20%;
     height: 4vmin;
   }
 }
@@ -961,7 +963,7 @@ footer .footer__mail {
 }
 @media (min-width: 992px) {
   footer .footer__mail {
-    text-align: left;
+    text-align: center;
     line-height: 4vmin;
     width: 20%;
     height: 4vmin;

@@ -43,26 +43,26 @@
 
 @mixin heartMenu{
     position: relative;
+    width: 3vmax;
+    height: 3vmax;
+    @media (min-width: 768px) and (max-width: 992px){
+            width: 4vmax;
+            height: 4vmax;
+    }
     &--border{
-      width: 7vmin;
-      height: 7vmin;
+      width: 100%;
+      height: auto;
       position: absolute;
-      bottom: 1vmax;
-      right: 1vmin;
-        @media (min-width: 768px) and (max-width: 992px){
-            @include widthHeight(4vmin, 4vmin); 
-        }
+      
         @media (min-width: 992px){
             @include widthHeight(2.5vmax, 2.5vmax); 
         }
     }
     &--solid{
-      width: 7vmin;
-      height: 7vmin;
+      width: 100%;
+      height: auto;
       opacity: 0;
       position: absolute;
-      bottom: 1vmax;
-      right: 1vmin;
       transform: scale(1);
         @media (min-width: 768px) and (max-width: 992px){
             @include widthHeight(4vmin, 4vmin); 

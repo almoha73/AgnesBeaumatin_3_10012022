@@ -2,8 +2,7 @@
 
 .principal{
     @include abstracts.widthHeight(100%, auto);
-    margin-bottom: 25px;
-    padding-top: 15vmin;
+    padding-bottom: 25px;
     display: flex;
     align-items: center;
     flex-direction: column; 
@@ -14,15 +13,16 @@
         margin-left: 0;   
     }
     section{
-        width: 96%;
+        width: 100%;
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.flex(flex, space-evenly, center, wrap, row);
+        }
     }
     section > p{
         position: relative;
-        width: 82%;
-        margin: auto;
-        @media (max-width: 768px){
-            margin-left: 30px;
-        }
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 3%;
         
         &::before{
         content: "";
@@ -32,7 +32,6 @@
         border-bottom: 4px solid abstracts.$color-tertiary;
         position: absolute;
         bottom: -08px;
-        
         }
     }
 }
@@ -40,15 +39,17 @@ article{
     @include abstracts.widthHeight(100%, auto);
     @include abstracts.flex(flex, space-between, center, nowrap, row);
     border-radius: 1rem;
-    margin-bottom: 25px;
-    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
     overflow: hidden;
+    @media (min-width: 768px) and (max-width: 992px){
+        width: 45%;
+    }
     &:hover .plats, &:hover .entrees, &:hover .desserts{
         border-radius: 01rem 0 0 1rem;
     }
     &:hover .check{
         margin-right: 0;
-        opacity: 1;
     }
     &:hover .fa-check-circle{
         transform: rotate(360deg);

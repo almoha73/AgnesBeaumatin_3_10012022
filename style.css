@@ -129,6 +129,7 @@ header {
 .headermenu .fa-arrow-left {
   font-size: 30px;
   line-height: 70px;
+  margin-left: 10px;
 }
 .headermenu a {
   color: #000;
@@ -152,43 +153,42 @@ header {
 
 .restaurant-menu {
   width: 100%;
-  height: 5vmax;
+  height: 10vmax;
   line-height: 5vmax;
-  margin-top: 51%;
+  margin-top: 20vmax;
   border-radius: 2rem 2rem 0 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .restaurant-menu {
-    width: 80%;
+    width: 100%;
   }
 }
 .restaurant-menu h1 {
   width: 80%;
-  height: 100%;
+  height: auto;
   font-size: 2.8vmax;
   font-family: "Shrikhand", cursive;
 }
 
 .restaurant-menu__heart {
-  width: 5vmax;
-  height: 5vmax;
   position: relative;
-}
-.restaurant-menu__heart--border {
-  width: 7vmin;
-  height: 7vmin;
-  position: absolute;
-  bottom: 1vmax;
-  right: 1vmin;
+  width: 3vmax;
+  height: 3vmax;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-menu__heart--border {
-    width: 4vmin;
-    height: 4vmin;
+  .restaurant-menu__heart {
+    width: 4vmax;
+    height: 4vmax;
   }
+}
+.restaurant-menu__heart--border {
+  width: 100%;
+  height: auto;
+  position: absolute;
 }
 @media (min-width: 992px) {
   .restaurant-menu__heart--border {
@@ -197,12 +197,10 @@ header {
   }
 }
 .restaurant-menu__heart--solid {
-  width: 7vmin;
-  height: 7vmin;
+  width: 100%;
+  height: auto;
   opacity: 0;
   position: absolute;
-  bottom: 1vmax;
-  right: 1vmin;
   transform: scale(1);
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -496,21 +494,21 @@ section > h3 {
 }
 .restaurant-card__text .restaurant-card__heart {
   position: relative;
+  width: 3vmax;
+  height: 3vmax;
   margin-right: 4vmin;
   bottom: 0.2vmax;
 }
-.restaurant-card__text .restaurant-card__heart--border {
-  width: 7vmin;
-  height: 7vmin;
-  position: absolute;
-  bottom: 1vmax;
-  right: 1vmin;
-}
 @media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border {
-    width: 4vmin;
-    height: 4vmin;
+  .restaurant-card__text .restaurant-card__heart {
+    width: 4vmax;
+    height: 4vmax;
   }
+}
+.restaurant-card__text .restaurant-card__heart--border {
+  width: 100%;
+  height: auto;
+  position: absolute;
 }
 @media (min-width: 992px) {
   .restaurant-card__text .restaurant-card__heart--border {
@@ -519,12 +517,10 @@ section > h3 {
   }
 }
 .restaurant-card__text .restaurant-card__heart--solid {
-  width: 7vmin;
-  height: 7vmin;
+  width: 100%;
+  height: auto;
   opacity: 0;
   position: absolute;
-  bottom: 1vmax;
-  right: 1vmin;
   transform: scale(1);
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -583,8 +579,7 @@ section a.palette::after, section a.note::after {
 .principal {
   width: 100%;
   height: auto;
-  margin-bottom: 25px;
-  padding-top: 15vmin;
+  padding-bottom: 25px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -603,17 +598,22 @@ section a.palette::after, section a.note::after {
   }
 }
 .principal section {
-  width: 96%;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .principal section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 .principal section > p {
   position: relative;
-  width: 82%;
-  margin: auto;
-}
-@media (max-width: 768px) {
-  .principal section > p {
-    margin-left: 30px;
-  }
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: 3%;
 }
 .principal section > p::before {
   content: "";
@@ -635,16 +635,20 @@ article {
   flex-wrap: nowrap;
   flex-direction: row;
   border-radius: 1rem;
-  margin-bottom: 25px;
-  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-top: 15px;
   overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  article {
+    width: 45%;
+  }
 }
 article:hover .plats, article:hover .entrees, article:hover .desserts {
   border-radius: 1rem 0 0 1rem;
 }
 article:hover .check {
   margin-right: 0;
-  opacity: 1;
 }
 article:hover .fa-check-circle {
   transform: rotate(360deg);

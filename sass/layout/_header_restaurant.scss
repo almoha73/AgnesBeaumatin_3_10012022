@@ -48,11 +48,15 @@ header{
         font-size: 30px; 
         line-height: 70px;
         margin-left: 10px;
+        
+        z-index: 2;
     }
     & a{
+        cursor: pointer;
+        z-index: 2;
         color: abstracts.$color-black;
         @media (min-width: 992px){
-          z-index: 2;
+          z-index: 3;
         }
     }
   } 

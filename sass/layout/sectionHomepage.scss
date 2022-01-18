@@ -3,7 +3,6 @@
 .restaurant__choice{
     @include abstracts.widthHeight(100%, auto);
     @include abstracts.flex(flex, flex-start, center, wrap, column);
-    padding: 20px;
         @media (min-width: 768px) and (max-width: 992px){
             @include abstracts.flex(flex, center, center, wrap, row);
             gap: 2vmax;
@@ -14,14 +13,19 @@
             @include abstracts.widthHeight(65%, auto);
         } 
     & a{
-        @include abstracts.widthHeight(100%, 55vmin);
+        @include abstracts.widthHeight(95%, 55vmin);
         text-decoration: none;
         color: abstracts.$color-black;
         display: block;
         flex-direction: column;
         margin-bottom: 20px;
+        &:hover{
+            box-shadow: -1px 2px 08px 4px abstracts.$color-secondary;
+            border-radius: 1rem;
+            transform: scale(1.01);
+            }
             @media (min-width: 768px) and (max-width: 992px){
-                @include abstracts.widthHeight(45%, 50%); 
+                @include abstracts.widthHeight(45%, 30vmin); 
             }
             @media (min-width: 992px){
                 @include abstracts.widthHeight(45%, 20vmax);
@@ -35,7 +39,7 @@
     } 
     & > h3{
         align-items: flex-start;
-        width: 100%;
+        width: 95%;
         margin-bottom: 20px;
         @media (min-width: 768px) and (max-width: 992px){
             width: 92%;
@@ -55,10 +59,10 @@
     @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, 35vmin);
     }
-    &:hover{
-    box-shadow: -1px 2px 08px 4px abstracts.$color-secondary;
-    transform: scale(1.01);
-    }
+    // &:hover{
+    // box-shadow: -1px 2px 08px 4px abstracts.$color-secondary;
+    // transform: scale(1.01);
+    // }
 }
 
 .restaurant-card__text{
@@ -70,8 +74,8 @@
     padding-top: 1vmax;  
     padding-bottom: 1vmax;
         @media (min-width: 768px) and (max-width: 992px){
-            @include abstracts.widthHeight(100%, 12%);
-            bottom: 6.5vmax;    
+            @include abstracts.widthHeight(100%, 24%);
+            bottom: 26%;    
         }
         @media (min-width: 992px){
             @include abstracts.widthHeight(100%, 4.5vmax);
@@ -93,10 +97,27 @@
     }
     }
     .restaurant-card__heart{
-      @include abstracts.heartMenu;
-      margin-right: 4vmin;
-      bottom: 0.2vmax;
-      
+        @include abstracts.heartMenu;
+        left: 85%;
+        bottom: 50%;
+        &--border{
+            bottom: 60%;
+            @media (min-width: 768px) and (max-width: 992px){
+                bottom: 50%;
+            }
+            @media (min-width: 992px){
+                bottom: 90%
+            }
+        }
+        &--solid{
+            bottom: 60%;
+            @media (min-width: 768px) and (max-width: 992px){
+                bottom: 50%;
+            }
+            @media (min-width: 992px){
+                bottom: 90%
+            }
+        }   
     }
     
 }

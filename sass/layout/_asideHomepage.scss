@@ -14,12 +14,14 @@ body{
     z-index: 0;
 }
 main{
+    padding-top: 5%;
+    padding-bottom: 5%;
     @include abstracts.flex(flex, center, center, wrap, column);
     @include abstracts.widthHeight(100%, auto);
     flex: 1; 
     @media (min-width: 992px){
-        @include abstracts.widthHeight(90%, auto);
-        @include abstracts.flex(flex, space-between, center, wrap, row);
+        @include abstracts.widthHeight(100%, auto);
+        @include abstracts.flex(flex, space-evenly, center, wrap, row);
     }
 }
     

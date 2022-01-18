@@ -3,9 +3,18 @@
       transform: translateX(0px); 
     }
     100%{
-    transform: translateX(-58px);
+    transform: translateX(-67px);
     }
   }
+
+  @keyframes plat_dimension{
+    0%{
+      width: 437px; 
+    }
+    100%{
+    width: 337px;
+    }
+  }  
   
   @keyframes check_rotate{
     0%{  

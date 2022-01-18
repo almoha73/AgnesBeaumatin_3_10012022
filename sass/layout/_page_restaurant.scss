@@ -5,6 +5,7 @@
     margin-bottom: 25px;
     padding-top: 15vmin;
     display: flex;
+    align-items: center;
     flex-direction: column; 
     background-color: abstracts.$color-background;
     @media (min-width: 768px) and (max-width: 992px){
@@ -12,8 +13,10 @@
         @include abstracts.flex(flex, space-evenly, center, wrap, 0);
         margin-left: 0;   
     }
-  
-    & > p{
+    section{
+        width: 96%;
+    }
+    section > p{
         position: relative;
         width: 82%;
         margin: auto;
@@ -32,150 +35,94 @@
         
         }
     }
-    .entrees, .plats, .desserts{
-        @include abstracts.widthHeight(100%, auto);
-        @include abstracts.flex(flex, space-evenly, center, nowrap, column);
-        margin-bottom: 25px;
-        margin-top: 20px;
-        flex-wrap: nowrap;
+}
+article{
+    @include abstracts.widthHeight(100%, auto);
+    @include abstracts.flex(flex, space-between, center, nowrap, row);
+    border-radius: 1rem;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    overflow: hidden;
+    &:hover .plats, &:hover .entrees, &:hover .desserts{
+        border-radius: 01rem 0 0 1rem;
     }
-    .entrees{
+    &:hover .check{
+        margin-right: 0;
+        opacity: 1;
+    }
+    &:hover .fa-check-circle{
+        transform: rotate(360deg);
+        transition-delay: 2s;
+        transition: transform .5s ease-in;
+    }
+    & .entrees{
         animation: decalage_plats 2s 100ms linear both;
         opacity: 0;
     }
-    .plats{
+    & .plats{
         opacity: 0;
         animation: decalage_plats 2s 500ms linear both;
     }
-    .desserts{
+    & .desserts{
         opacity: 0;
         animation: decalage_plats 2s 1s linear both;
     }
-    
-    & .plat{
-        @include abstracts.widthHeight(330px, 60px);
-        @include abstracts.flex(flex, space-between, 0, 0, column);
-        background-color: abstracts.$color-white;
+
+    & .plats, & .entrees, & .desserts{
+        @include abstracts.widthHeight(100%, 67px);
+        @include abstracts.flex(flex, space-evenly, 0, 0, column);
         border-radius: 1rem;
-        overflow: hidden;
-        line-height: 25px;
+        background-color: abstracts.$color-white;
         box-shadow: -1px 2px 12px 8px rgba(229,229,229,0.75);
-        margin-bottom: 15px;
-        
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: 10px;
         & > p{
-            margin-left: 20px;
-            margin-top: 5px;
             font-weight: bold;
-            font-size: 1.6vmax;
         }
-     
-        & .plat__ingredient{
+        & p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        & .plat{
             @include abstracts.flex(flex, space-between, 0, 0, row);
-            & p{
-                font-size: 1.6vmax;
-                background-color: abstracts.$color-white;
-                margin-left: 20px;
+            width: 100%;
+            & > p{
+                font-size: 0.8em;
             }
-        
             & span{
-                width: 40px;
-                height: 31px;      
-                background-color: abstracts.$color-white; 
-                display: block;
-                position: relative;
-                right: 15px;
-                padding-right: 0px;
-                text-align: center;
-                font-weight: bold;
-         
-                &::before{
-                    content: "...";
-                    display: block;
-                    position: absolute;
-                    right: 40px;
-                    width: 52px;
-                    height: 30px;
-                    padding-left: 5px;
-                    text-align: left;
-                    opacity: 0;   
-                    background-color: abstracts.$color-white; 
+                padding: 0 1em 0 1em;
+                flex-shrink: 0;
                 }
             }
-     
-            &:hover span{
-                animation: check_translate 0.3s linear both;
-                &::before{
-                opacity: 1;
-                }
-            }
-            &:hover .suspension__none{
-                &::before{
-                    opacity: 0;
-                }
-            }
-        }
-    
-  
-        & .check{
-            width: 58px;
-            height: 67px; 
-            background-color: abstracts.$color-tertiary;
-            line-height: 67px;
-            text-align: center;
-            border-radius: 0 1rem 1rem 0;
-            opacity: 1;
-            position: relative;
-            left: 100%;
-            bottom: 62px;
-            & .fas{
-                color: abstracts.$color-tertiary;
-                background-color: abstracts.$color-white;
-                font-size: 15px;
-                width: 25px;
-                height: 25px;
-                line-height: 15px;
-                text-align: center;
-                border-radius: 50%;
-                padding: 5px;
-                animation-name: ckeck_rotate;
-                animation-duration: 1s;
-            }
-        }
-      
-        &:hover .check{
-            animation: check_translate 0.3s linear both; 
-            opacity: 1;
-        }
-        &:hover .check div .fas{
-             animation: check_rotate 0.3s linear both;
-        }
-    
+    }
+}
+.check{
+    @include abstracts.flex(flex, center, center, 0, column);
+    background-color: abstracts.$color-tertiary;
+    color: white;
+    height: 67px;
+    width: 80px;
+    border-radius: 0 1rem 1rem 0;
+    margin-right: -80px;
+    transition: margin 0.5s ease-in-out;
+    cursor: pointer;
+    .fa-check-circle {
+        transform: rotate(0deg);
+        transition: transform 0.5s ease;
+    }
+}
         
-    }
-    
-    & .lanote__entree{
-        height: 60px;
-       
-        @media (max-width: 768px){
-            height: 60px;
-            
-        }
-    }
-    & .lanote{
-        height: auto;
-        @media (max-width: 768px){
-            height: auto;
-        }
-    }
   
-    & .header__button--menu{
+.header__button--menu{
         @include abstracts.bouton;
         width: 200px;
         margin-top: 100px;
         text-align: center;
         margin: auto;     
     }
-  }
+  
 
   
 

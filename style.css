@@ -94,6 +94,11 @@ header h3 {
 header {
   width: 100%;
 }
+@media (min-width: 992px) {
+  header {
+    padding: 0;
+  }
+}
 
 .headermenu {
   display: flex;
@@ -102,6 +107,12 @@ header {
   height: 70px;
   position: relative;
   background-color: #fff;
+}
+@media (min-width: 992px) {
+  .headermenu {
+    width: 100%;
+    height: 15vmax;
+  }
 }
 .headermenu::before {
   content: "";
@@ -114,17 +125,36 @@ header {
   left: 0;
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  z-index: 0;
   opacity: 1;
 }
+@media (min-width: 992px) {
+  .headermenu::before {
+    opacity: 0.7;
+    width: 100%;
+    height: 15vmax;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
 .headermenu__title {
-  width: 50%;
-  text-align: left;
-  margin-left: 20%;
+  width: 100%;
+  text-align: center;
+  margin-left: -36px;
   font-size: 30px;
   margin-top: 10px;
   line-height: 50px;
   font-family: "Shrikhand", cursive;
+}
+@media (min-width: 992px) {
+  .headermenu__title {
+    z-index: 2;
+    font-size: 5vmin;
+  }
 }
 .headermenu .fa-arrow-left {
   font-size: 30px;
@@ -133,6 +163,11 @@ header {
 }
 .headermenu a {
   color: #000;
+}
+@media (min-width: 992px) {
+  .headermenu a {
+    z-index: 2;
+  }
 }
 
 .header__palette::before {
@@ -155,9 +190,9 @@ header {
   width: 100%;
   height: 10vmax;
   line-height: 5vmax;
-  margin-top: 20vmax;
   border-radius: 2rem 2rem 0 0;
   display: flex;
+  margin-top: 25vmax;
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
@@ -165,6 +200,11 @@ header {
 @media (min-width: 768px) and (max-width: 992px) {
   .restaurant-menu {
     width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-menu {
+    margin-top: 0;
   }
 }
 .restaurant-menu h1 {
@@ -354,7 +394,7 @@ aside a {
   margin-right: 20px;
 }
 
-section {
+.restaurant__choice {
   width: 100%;
   height: auto;
   display: flex;
@@ -365,7 +405,7 @@ section {
   padding: 20px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  section {
+  .restaurant__choice {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,7 +415,7 @@ section {
   }
 }
 @media (min-width: 992px) {
-  section {
+  .restaurant__choice {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,7 +426,7 @@ section {
     height: auto;
   }
 }
-section a {
+.restaurant__choice a {
   width: 100%;
   height: 55vmin;
   text-decoration: none;
@@ -396,35 +436,35 @@ section a {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  section a {
+  .restaurant__choice a {
     width: 45%;
     height: 50%;
   }
 }
 @media (min-width: 992px) {
-  section a {
+  .restaurant__choice a {
     width: 45%;
     height: 20vmax;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  section a img {
+  .restaurant__choice a img {
     width: 100%;
     height: 100%;
   }
 }
-section > h3 {
+.restaurant__choice > h3 {
   align-items: flex-start;
   width: 100%;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  section > h3 {
+  .restaurant__choice > h3 {
     width: 92%;
   }
 }
 @media (min-width: 992px) {
-  section > h3 {
+  .restaurant__choice > h3 {
     text-align: center;
     margin-bottom: 0;
   }
@@ -597,11 +637,12 @@ section a.palette::after, section a.note::after {
     margin-left: 0;
   }
 }
-.principal section {
-  width: 100%;
+.principal .restaurant__section {
+  width: 96%;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .principal section {
+  .principal .restaurant__section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -609,13 +650,22 @@ section a.palette::after, section a.note::after {
     flex-direction: row;
   }
 }
-.principal section > p {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  margin-left: 3%;
+@media (min-width: 992px) {
+  .principal .restaurant__section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
-.principal section > p::before {
+.principal .restaurant__section > p {
+  position: relative;
+  width: 96%;
+  margin-left: 2%;
+  margin-bottom: 25px;
+}
+.principal .restaurant__section > p::before {
   content: "";
   display: block;
   width: 40px;
@@ -624,6 +674,11 @@ section a.palette::after, section a.note::after {
   border-bottom: 4px solid #99e2d0;
   position: absolute;
   bottom: -8px;
+}
+@media (min-width: 992px) {
+  .principal .restaurant__section > p::before {
+    margin-left: 0;
+  }
 }
 
 article {
@@ -642,6 +697,11 @@ article {
 @media (min-width: 768px) and (max-width: 992px) {
   article {
     width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  article {
+    width: 30%;
   }
 }
 article:hover .plats, article:hover .entrees, article:hover .desserts {

@@ -12,26 +12,33 @@
         @include abstracts.flex(flex, space-evenly, center, wrap, 0);
         margin-left: 0;   
     }
-    section{
-        width: 100%;
+    .restaurant__section{
+        width: 96%;
+        margin-bottom: 20px;
         @media (min-width: 768px) and (max-width: 992px){
             @include abstracts.flex(flex, space-evenly, center, wrap, row);
         }
+        @media (min-width: 992px){
+            @include abstracts.flex(flex, space-evenly, center, wrap, row);
+            
+        }
     }
-    section > p{
+    .restaurant__section > p{
         position: relative;
-        width: 100%;
-        margin-bottom: 10px;
-        margin-left: 3%;
-        
-        &::before{
-        content: "";
-        display: block;
-        @include abstracts.widthHeight(40px, 50px);
-        background-color: transparent;
-        border-bottom: 4px solid abstracts.$color-tertiary;
-        position: absolute;
-        bottom: -08px;
+        width: 96%;
+        margin-left: 2%;
+        margin-bottom: 25px;
+            &::before{
+            content: "";
+            display: block;
+            @include abstracts.widthHeight(40px, 50px);
+            background-color: transparent;
+            border-bottom: 4px solid abstracts.$color-tertiary;
+            position: absolute;
+            bottom: -08px;
+                @media (min-width: 992px){
+                    margin-left: 0;
+                }
         }
     }
 }
@@ -44,6 +51,9 @@ article{
     overflow: hidden;
     @media (min-width: 768px) and (max-width: 992px){
         width: 45%;
+    }
+    @media (min-width: 992px){
+        width: 30%;
     }
     &:hover .plats, &:hover .entrees, &:hover .desserts{
         border-radius: 01rem 0 0 1rem;

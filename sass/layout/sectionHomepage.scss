@@ -1,6 +1,6 @@
 @use "../abstracts";
    
-section{
+.restaurant__choice{
     @include abstracts.widthHeight(100%, auto);
     @include abstracts.flex(flex, flex-start, center, wrap, column);
     padding: 20px;

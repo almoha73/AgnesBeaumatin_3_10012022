@@ -1045,6 +1045,7 @@ footer .footer__mail {
 .loader {
   width: 250px;
   height: 250px;
+  animation: size 1ms linear 3s both;
 }
 .loader div {
   height: 100%;
@@ -1065,10 +1066,6 @@ div:hover {
   animation-play-state: paused;
 }
 
-.loader, .loader * {
-  will-change: transform;
-}
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -1078,6 +1075,13 @@ div:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes size {
+  100% {
+    width: 0;
+    height: 0;
+    transform: translateY(-9999px);
   }
 }
 

@@ -19,12 +19,9 @@
         background-color: #eaeaea;
   }
   .loader {
-    //position: relative;
-    //margin: 75px auto;
     width: 250px;
     height: 250px;
-    //display: block;
-    //overflow: hidden;
+    animation: size 1ms linear 3s both;
     div {
       height: 100%;
     }
@@ -39,10 +36,6 @@
   div:hover {
     animation-play-state: paused;
   }
-  
-  .loader, .loader * {
-    will-change: transform;
-  }
 
   @keyframes rotate {
     0% {
@@ -55,7 +48,13 @@
       transform: rotate(360deg);
     }
   }
-  
+  @keyframes size {
+         100%{
+          width: 0;
+          height: 0;
+          transform: translateY(-9999px);
+         }
+}  
 
 
 // .loader{

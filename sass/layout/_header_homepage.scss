@@ -6,8 +6,10 @@
   text-align: center;
   color: abstracts.$color-black;
   background-color: abstracts.$color-white;
-  line-height: 70px;
+  line-height: auto;
   animation: slide-in-top 0.8s 2s ease-out both; 
+  font-size: 10vmin;
+  
 }
 @keyframes slide-in-top {
     0% {
@@ -32,6 +34,8 @@ text-decoration: none;
 }
 
 header{
+  background-color: abstracts.$color-background;
+  padding-bottom: 15vmin;
   @include abstracts.flex(flex, center, center, wrap, column); 
   @media (min-width: 992px){
     padding-bottom: 5vmin;
@@ -39,7 +43,8 @@ header{
   .local{
     @include abstracts.flex(flex, center, center, 0, 0); 
     @include abstracts.widthHeight(100%, 70px);
-    background-color: abstracts.$color-background2; 
+    background: linear-gradient(0deg, rgba(234,234,234,1) 88%, rgba(207,207,207,1) 100%);
+    
   }
   span img{
     @include abstracts.widthHeight(2rem, 2rem);

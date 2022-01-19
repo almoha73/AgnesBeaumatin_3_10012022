@@ -101,8 +101,7 @@ aside{
         font-weight: bold;
     }
     .aside__icons{
-        font-size: 20px;
-        line-height: 24px;
+        @include abstracts.fz_lh(20px, 24px);
         margin-right: 20px;
   }
 }

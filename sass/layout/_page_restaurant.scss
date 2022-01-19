@@ -2,10 +2,8 @@
 
 .principal{
     @include abstracts.widthHeight(100%, auto);
+    @include abstracts.flex(flex, 0, center, 0, column);
     padding-bottom: 25px;
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
     background-color: abstracts.$color-background;
     @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, auto);
@@ -113,8 +111,7 @@ article{
     @include abstracts.flex(flex, center, center, 0, column);
     background-color: abstracts.$color-tertiary;
     color: white;
-    height: 67px;
-    width: 80px;
+    @include abstracts.widthHeight(80px, 67px);
     border-radius: 0 1rem 1rem 0;
     margin-right: -80px;
     transition: margin 0.5s ease-in-out;

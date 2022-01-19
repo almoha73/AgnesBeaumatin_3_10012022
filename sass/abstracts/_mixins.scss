@@ -20,6 +20,10 @@
     right: $right;
     left: $left;
 }
+@mixin fz_lh($fz, $lh){
+    font-size: $fz;
+    line-height: $lh;
+}
 @mixin footer{
     display: flex;
     flex-wrap: nowrap;

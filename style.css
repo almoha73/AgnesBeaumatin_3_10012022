@@ -518,7 +518,7 @@ aside a {
   .restaurant-card__text {
     width: 100%;
     height: 24%;
-    bottom: 26%;
+    bottom: 25%;
   }
 }
 @media (min-width: 992px) {
@@ -530,8 +530,8 @@ aside a {
 }
 .restaurant-card__text h3, .restaurant-card__text p {
   font-size: 3.5vmin;
-  padding-left: 2vmin;
   line-height: 6vmin;
+  padding-left: 2vmin;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .restaurant-card__text h3, .restaurant-card__text p {
@@ -543,7 +543,7 @@ aside a {
   .restaurant-card__text h3, .restaurant-card__text p {
     width: 100%;
     height: 70%;
-    font-size: 1.5vmax;
+    font-size: 1.4vmax;
     line-height: 70%;
     padding-left: 2vmin;
   }
@@ -654,18 +654,20 @@ section a.palette::after, section a.note::after {
 }
 @media (min-width: 992px) {
   section a.palette::after, section a.note::after {
-    font-size: 1.3vmax;
-    line-height: 2.5vmax;
+    font-size: 1.3vmin;
+    line-height: 2.5vmin;
   }
 }
 
 .principal {
   width: 100%;
   height: auto;
-  padding-bottom: 25px;
   display: flex;
+  justify-content: 0;
   align-items: center;
+  flex-wrap: 0;
   flex-direction: column;
+  padding-bottom: 25px;
   background-color: #f6f6f6;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -816,8 +818,8 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
   flex-direction: column;
   background-color: #99e2d0;
   color: white;
-  height: 67px;
   width: 80px;
+  height: 67px;
   border-radius: 0 1rem 1rem 0;
   margin-right: -80px;
   transition: margin 0.5s ease-in-out;

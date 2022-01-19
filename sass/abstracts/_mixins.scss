@@ -46,14 +46,16 @@
     width: 3vmax;
     height: 3vmax;
     @media (min-width: 768px) and (max-width: 992px){
-            width: 4vmax;
-            height: 4vmax;
+            width: 4vmin;
+            height: 4vmin;
     }
     &--border{
       width: 100%;
       height: auto;
       position: absolute;
-      
+      @media (min-width: 768px) and (max-width: 992px){
+        @include widthHeight(100%, 100%); 
+    }
         @media (min-width: 992px){
             @include widthHeight(2.5vmax, 2.5vmax); 
         }
@@ -65,7 +67,7 @@
       position: absolute;
       transform: scale(1);
         @media (min-width: 768px) and (max-width: 992px){
-            @include widthHeight(4vmin, 4vmin); 
+            @include widthHeight(100%, 100%); 
         }
         @media (min-width: 992px){
             @include widthHeight(2.5vmax, 2.5vmax); 

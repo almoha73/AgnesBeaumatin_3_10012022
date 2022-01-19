@@ -86,12 +86,14 @@ article{
         overflow: hidden;
         white-space: nowrap;
         padding-left: 10px;
-        & > p{
-            font-weight: bold;
-        }
         & p{
+            font-size: 0.7em;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+        & > p{
+            font-weight: bold;
+            font-size: 0.9em;
         }
         
         & .plat{

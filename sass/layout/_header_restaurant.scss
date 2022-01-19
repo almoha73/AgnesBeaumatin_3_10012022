@@ -1,11 +1,8 @@
 @use "../abstracts";
 
-header{
+.header_restaurant{
     width: 100%;
-    @media (min-width: 992px){
-      padding: 0;
-      
-    }
+    padding-bottom: 0;
 }
 .headermenu{
     display: flex;
@@ -22,7 +19,7 @@ header{
       @include abstracts.dimensionPosition(100%, 25vmax, absolute, 70px, 0, 0, 0);
       background-size: cover;
       background-position: center;
-      z-index: 0;
+      z-index: -1;
       opacity: 1; 
       @media (min-width: 992px){
           opacity: 0.7;
@@ -84,13 +81,13 @@ header{
 
   .restaurant-menu{ 
     @include abstracts.widthHeight(100%, 10vmax);
-    line-height: 5vmax;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 3rem 3rem 0 0;
     display: flex;
-    margin-top: 25vmax;
+    margin-top: 20vmax;
     justify-content: center;
     align-items: center;
     background-color: abstracts.$color-background;
+    z-index: 5;
     @media (min-width: 768px) and (max-width: 992px){
         width: 100%;
     }

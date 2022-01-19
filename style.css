@@ -8,17 +8,6 @@
   padding: 0;
 }
 
-.header__title--accueil {
-  width: 100%;
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  color: #000;
-  background-color: #fff;
-  line-height: auto;
-  animation: slide-in-top 0.8s 2s ease-out both;
-  font-size: 10vmin;
-}
-
 @keyframes slide-in-top {
   0% {
     transform: translateX(-1000px);
@@ -47,20 +36,31 @@
 .header-button {
   text-decoration: none;
 }
+@media (min-width: 992px) {
+  .header-button {
+    padding-bottom: 5vmin;
+  }
+}
 
 header {
+  height: auto;
   background-color: #f6f6f6;
-  padding-bottom: 15vmin;
+  padding-bottom: 6vmax;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media (min-width: 992px) {
-  header {
-    padding-bottom: 5vmin;
-  }
+header .header__title--accueil {
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  line-height: auto;
+  animation: slide-in-top 0.8s 2s ease-out both;
+  font-size: 10vmin;
 }
 header .local {
   display: flex;
@@ -450,7 +450,7 @@ aside a {
 }
 .restaurant__choice a:hover {
   box-shadow: -1px 2px 8px 4px #9356dc;
-  border-radius: 1rem;
+  border-radius: 2rem;
   transform: scale(1.01);
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -490,13 +490,14 @@ aside a {
   .restaurant__choice > h3 {
     text-align: center;
     margin-bottom: 0;
+    font-size: 2.5vmax;
   }
 }
 
 .restaurant-card {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem;
   box-shadow: -1px 2px 12px 8px #e5e5e5e5;
   position: relative;
 }
@@ -651,14 +652,14 @@ section a.palette::after, section a.note::after {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section a.palette::after, section a.note::after {
-    font-size: 2vmin;
-    line-height: 4vmin;
+    font-size: 1.8vmin;
+    line-height: 3.6vmin;
   }
 }
 @media (min-width: 992px) {
   section a.palette::after, section a.note::after {
-    font-size: 1.3vmin;
-    line-height: 2.5vmin;
+    font-size: 1.3vmax;
+    line-height: 2.5vmax;
   }
 }
 
@@ -1028,39 +1029,6 @@ footer .footer__mail {
   100% {
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  animation: size 1ms linear 2s forwards;
-  z-index: 999;
-}
-.loader .spinner {
-  width: 275px;
-  height: 275px;
-  border-radius: 50%;
-  border: 10px solid transparent;
-  border-top-color: #99e2d0;
-  border-bottom-color: #ff79d4;
-  animation: spinner 1s linear infinite;
-}
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes size {
-  100% {
-    width: 0;
-    height: 0;
-    transform: translateY(-9999px);
   }
 }
 

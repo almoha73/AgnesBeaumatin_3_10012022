@@ -841,9 +841,11 @@ footer {
   flex-wrap: nowrap;
   flex-direction: column;
   height: auto;
+  padding-top: 5%;
+  padding-bottom: 9%;
   padding-left: 3%;
   font-size: 2vmax;
-  line-height: 7vmax;
+  height: auto;
   background-color: #353535;
   color: #fff;
   width: 100%;
@@ -872,8 +874,19 @@ footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-size: 3vmax;
-  width: 20%;
-  text-align: center;
+  width: 100%;
+  text-align: left;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  footer h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  footer h2 {
+    justify-content: center;
+    width: 20%;
+  }
 }
 footer a {
   text-decoration: none;
@@ -939,8 +952,6 @@ footer .footer__mention {
   flex-wrap: nowrap;
   width: 80%;
   justify-content: flex-start;
-  height: 3vmax;
-  line-height: 3vmax;
   color: white;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -958,8 +969,6 @@ footer .footer__mention {
 }
 footer .footer__mail {
   color: #fff;
-  height: 3vmax;
-  line-height: 3vmax;
 }
 @media (min-width: 992px) {
   footer .footer__mail {

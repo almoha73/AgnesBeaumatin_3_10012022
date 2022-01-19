@@ -1,97 +1,45 @@
 @use "../abstracts";
 
-@mixin loaderDivMixin {
-    border-radius: 50%;
-    padding: 10px;
-    border: 6px solid transparent;
-    animation: rotate linear 3s infinite;
-  }
-  .loader__home{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        z-index: 10;
-        background-color: #eaeaea;
-        animation: size 1ms linear 2s forwards;
-  }
+.loader__home{
+    @include abstracts.flex(flex, center, center, 0, 0);
+    @include abstracts.widthHeight(100%, 100vh);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: abstracts.$color-background2;
+    animation: size 1ms linear 3s forwards;
+}
   .loader {
-     
-    width: 250px;
-    height: 250px;
+    @include abstracts.widthHeight(250px, 250px);  
     div {
       height: 100%;
     }
   }
   .loader, .loader div {
-    @include loaderDivMixin;
+    border-radius: 50%;
+    padding: 10px;
+    border: 6px solid transparent;
+    animation: rotate cubic-bezier(.05,.23,.47,.88) 3s infinite;
     border-top-color: abstracts.$color-tertiary;
-    border-left-color: abstracts.$color-primary;
-    animation-timing-function: cubic-bezier(.05,.23,.47,.88);
-    animation-duration: 2s;
+    border-right-color: abstracts.$color-primary;
   } 
-  .loader, .loader * {
-    will-change: transform;
-  }
-//   div:hover {
-//     animation-play-state: paused;
-//   }
 
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes size {
+@keyframes rotate {
+0% {
+    transform: rotate(0deg);
+}
+50% {
+    transform: rotate(180deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+@keyframes size {
          100%{
-          width: 0;
-          height: 0;
-          transform: translateY(-9999px);
+            @include abstracts.widthHeight(0, 0);  
+            transform: translateY(-9999px);
          }
 }  
 
 
-// .loader{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     animation: size 1ms linear 2s forwards;
-//     width: 100%;
-//     height: 100vh;
-//     position: fixed;
-//     top: 0;
-//     z-index: 10;
-//     background-color: #eaeaea;
-//     .spinner{
-//       width: 275px;
-//       height: 275px;
-//       border-radius: 50%;
-//       background-color: #eaeaea;
-//       border: 10px solid transparent;
-//       border-top-color: #99e2d0;
-//       border-bottom-color: #ff79d4;
-//       animation: spinner 1s linear infinite;
-//     }
-//   }
-  
-//   @keyframes spinner{
-//       to {
-//         transform: rotate(360deg); 
-//       }
-//   }
-//   @keyframes size {
-//     100%{
-//       width: 0;
-//       height: 0;
-//       transform: translateY(-9999px);
-//     }
-//   }

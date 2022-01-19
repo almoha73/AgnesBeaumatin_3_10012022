@@ -1045,7 +1045,6 @@ footer .footer__mail {
 .loader {
   width: 250px;
   height: 250px;
-  animation: size 1ms linear 3s both;
 }
 .loader div {
   height: 100%;
@@ -1055,7 +1054,7 @@ footer .footer__mail {
   border-radius: 50%;
   padding: 10px;
   border: 6px solid transparent;
-  animation: rotate linear 3.5s infinite;
+  animation: rotate linear 3s infinite;
   border-top-color: #99e2d0;
   border-left-color: #ff79da;
   animation-timing-function: cubic-bezier(0.05, 0.23, 0.47, 0.88);

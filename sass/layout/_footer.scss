@@ -1,0 +1,102 @@
+@use "../abstracts";
+
+footer{
+    @include abstracts.flex(flex, flex-start, flex-start, nowrap, column);
+    height: auto;
+    width: 100%;
+    padding: 6%;
+    font-size: 2vmax;
+    background-color: abstracts.$color-grey;
+    color: abstracts.$color-white;
+        @media (min-width: 768px) and (max-width: 992px){
+            @include abstracts.flex(0, center, center, nowrap, column);
+            padding: 4% 0;
+        }
+        @media (min-width: 992px){
+            @include abstracts.flex(flex, center, center, nowrap, row);
+            font-size: 1.3vmax;
+            padding: 4% 0;
+        }
+    & h2{
+        font-family: abstracts.$titre;
+        font-size: 3vmax;
+        width: 100%;
+        text-align: left;
+        @media (min-width: 768px) and (max-width: 992px){
+            text-align: center;
+        }
+        @media (min-width: 992px){
+            justify-content: center;
+            width: 20%;
+        }
+    }
+    & a{
+        text-decoration: none;   
+    }
+    .footer__ustensile{
+        @include abstracts.footer;
+            height: 3vmax;
+            line-height: 3vmax;
+            @media (min-width: 768px) and (max-width: 992px){
+                justify-content: center;
+            }
+            @media (min-width: 992px){
+                justify-content: center;
+                width: 20%;
+            }
+        & p{
+            margin-left: 2rem;
+            color: abstracts.$color-white;
+            line-height: 4vmin;
+        }
+        & i{
+            line-height: 4vmin;
+        }
+    }
+    .footer__partenaire{
+        @include abstracts.footer;
+        height: 3vmax;
+        line-height: 3vmax;
+            @media (min-width: 768px) and (max-width: 992px){
+                justify-content: center;
+            }
+            @media (min-width: 992px){
+                justify-content: center;
+                width: 20%;
+                height: 4vmin;
+            }
+            
+        & p{
+            margin-left: 2rem;
+            color: abstracts.$color-white;
+            line-height: 4vmin;
+        }
+        & i{
+            line-height: 4vmin;
+            font-size: 2vmax;
+        }
+    }
+    .footer__mention{
+        @include abstracts.footer;
+        color: white;
+        @media (min-width: 768px) and (max-width: 992px){
+            justify-content: center;
+        }
+        @media (min-width: 992px){
+            justify-content: center;
+            line-height: 4vmin;
+            width: 20%;
+            height: 4vmin;
+        }
+    }
+   .footer__mail {
+        color: abstracts.$color-white;
+        @media (min-width: 992px){
+            text-align: center;
+            line-height: 4vmin;
+            width: 20%;
+            height: 4vmin;
+        }
+    } 
+
+  }

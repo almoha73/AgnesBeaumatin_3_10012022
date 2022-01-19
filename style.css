@@ -1036,6 +1036,10 @@ footer .footer__mail {
   animation: size 1ms linear 2s forwards;
   width: 100%;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #eaeaea;
 }
 .loader .spinner {
   width: 275px;

@@ -146,7 +146,9 @@ section a.palette, section a.note{
       }
     } 
 }
-.note{
+a.note img{
   object-fit: cover;
+  width: 100%;
+  height: 21.5vh;
   object-position: 0 -143px;
 }

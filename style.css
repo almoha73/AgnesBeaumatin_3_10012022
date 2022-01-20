@@ -52,15 +52,20 @@ header.header__homepage {
   flex-wrap: wrap;
   flex-direction: column;
 }
+@media (min-width: 992px) {
+  header.header__homepage {
+    padding-bottom: 0;
+  }
+}
 header.header__homepage .header__title--accueil {
+  font-size: 10vmin;
   width: 100%;
-  font-family: "Shrikhand", cursive;
   text-align: center;
+  font-family: "Shrikhand", cursive;
   color: #000;
   background-color: #fff;
   line-height: auto;
   animation: slide-in-top 0.8s 2s ease-out both;
-  font-size: 10vmin;
 }
 header.header__homepage .local {
   display: flex;
@@ -88,10 +93,10 @@ header.header__homepage h2 {
   padding-top: 20px;
 }
 header.header__homepage h3 {
+  font-size: 1.7rem;
   width: 88%;
   text-align: center;
   font-weight: normal;
-  font-size: 1.7rem;
 }
 
 .header_restaurant {
@@ -141,10 +146,10 @@ header.header__homepage h3 {
   }
 }
 .headermenu__title {
+  font-size: 30px;
   width: 100%;
   text-align: center;
   margin-left: -36px;
-  font-size: 30px;
   margin-top: 10px;
   line-height: 50px;
   font-family: "Shrikhand", cursive;
@@ -191,11 +196,13 @@ header.header__homepage h3 {
 .restaurant-menu {
   width: 100%;
   height: 10vmax;
-  border-radius: 3rem 3rem 0 0;
   display: flex;
-  margin-top: 20vmax;
   justify-content: center;
   align-items: center;
+  flex-wrap: 0;
+  flex-direction: 0;
+  border-radius: 3rem 3rem 0 0;
+  margin-top: 20vmax;
   background-color: #f6f6f6;
   z-index: 5;
 }
@@ -305,6 +312,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-top: 2%;
   }
 }
 

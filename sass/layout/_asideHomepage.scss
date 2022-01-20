@@ -22,6 +22,7 @@ main{
     @media (min-width: 992px){
         @include abstracts.widthHeight(100%, auto);
         @include abstracts.flex(flex, space-evenly, center, wrap, row);
+        padding-top: 2%;
     }
 }
     

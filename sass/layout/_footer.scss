@@ -19,16 +19,14 @@ footer{
         }
     & h2{
         font-family: abstracts.$titre;
-        font-size: 3vmax;
-        width: 100%;
-        text-align: left;
-        @media (min-width: 768px) and (max-width: 992px){
-            text-align: center;
-        }
-        @media (min-width: 992px){
-            justify-content: center;
-            width: 20%;
-        }
+        @include abstracts.fz_w_txta(3vmax, 100%, left);
+            @media (min-width: 768px) and (max-width: 992px){
+                text-align: center;
+            }
+            @media (min-width: 992px){
+                justify-content: center;
+                width: 20%;
+            }
     }
     & a{
         text-decoration: none;   

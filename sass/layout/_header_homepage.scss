@@ -31,15 +31,17 @@ header.header__homepage{
   background-color: abstracts.$color-background;
   padding-bottom: 6vmax;
   @include abstracts.flex(flex, center, center, wrap, column); 
+    @media (min-width: 992px){
+        padding-bottom: 0;
+    }
   .header__title--accueil{
-    width: 100%;
+    @include abstracts.fz_w_txta(10vmin, 100%, center);
     font-family: abstracts.$titre;
-    text-align: center;
     color: abstracts.$color-black;
     background-color: abstracts.$color-white;
     line-height: auto;
     animation: slide-in-top 0.8s 2s ease-out both; 
-    font-size: 10vmin;
+
     
   }
   .local{
@@ -56,15 +58,11 @@ header.header__homepage{
       line-height: 60px;    
   }
   & h2{ 
-    font-size: 2.6rem;
-    width: 70%;
-    text-align: center;
+    @include abstracts.fz_w_txta(2.6rem, 70%, center);
     padding-top: 20px;
   }
   & h3{
-    width: 88%;
-    text-align: center;
+    @include abstracts.fz_w_txta(1.7rem, 88%, center);
     font-weight: normal;
-    font-size: 1.7rem;
   }
 }

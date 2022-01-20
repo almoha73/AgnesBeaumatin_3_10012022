@@ -29,10 +29,8 @@
     }
   
     &__title{
-        width: 100%;
-        text-align: center;
-        margin-left: -36px;
-        font-size: 30px;   
+      @include abstracts.fz_w_txta(30px, 100%, center);
+        margin-left: -36px;   
         margin-top: 10px;
         line-height: 50px;
         font-family: abstracts.$titre;
@@ -45,7 +43,6 @@
         font-size: 30px; 
         line-height: 70px;
         margin-left: 10px;
-        
         z-index: 2;
     }
     & a{
@@ -81,11 +78,9 @@
 
   .restaurant-menu{ 
     @include abstracts.widthHeight(100%, 10vmax);
+    @include abstracts.flex(flex, center, center, 0, 0);
     border-radius: 3rem 3rem 0 0;
-    display: flex;
     margin-top: 20vmax;
-    justify-content: center;
-    align-items: center;
     background-color: abstracts.$color-background;
     z-index: 5;
     @media (min-width: 768px) and (max-width: 992px){

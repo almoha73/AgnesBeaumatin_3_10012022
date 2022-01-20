@@ -24,6 +24,11 @@
     font-size: $fz;
     line-height: $lh;
 }
+@mixin fz_w_txta($fz, $width, $text-align){
+    font-size: $fz;
+    width: $width;
+    text-align: $text-align;
+}
 @mixin footer{
     display: flex;
     flex-wrap: nowrap;

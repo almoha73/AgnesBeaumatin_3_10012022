@@ -38,9 +38,7 @@ aside{
             @include abstracts.widthHeight(30%, auto);
         }
     & h2{
-        text-align: left;
-        font-size: 2.3rem;
-        width: 85%;
+        @include abstracts.fz_w_txta(2.3rem, 85%, left);
         margin-top: 30px;
         margin-bottom: 20px;
     }

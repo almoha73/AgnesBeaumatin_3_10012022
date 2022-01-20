@@ -8,16 +8,6 @@
   padding: 0;
 }
 
-@keyframes slide-in-top {
-  0% {
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .header__button {
   padding: 15px;
   border-radius: 2rem;
@@ -65,7 +55,7 @@ header.header__homepage .header__title--accueil {
   color: #000;
   background-color: #fff;
   line-height: auto;
-  animation: slide-in-top 0.8s 2s ease-out both;
+  animation: slide_in_top 1s 3s ease-out both;
 }
 header.header__homepage .local {
   display: flex;
@@ -340,9 +330,9 @@ aside {
   }
 }
 aside h2 {
-  text-align: left;
   font-size: 2.3rem;
   width: 85%;
+  text-align: left;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -1000,6 +990,34 @@ footer .footer__mail {
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes size {
+  100% {
+    width: 0;
+    height: 0;
+    transform: translateY(-9999px);
+  }
+}
+@keyframes slide_in_top {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes check_translate {
   0% {
     transform: translateX(0px);
@@ -1067,25 +1085,6 @@ footer .footer__mail {
   animation: rotate cubic-bezier(0.05, 0.23, 0.47, 0.88) 3s infinite;
   border-top-color: #99e2d0;
   border-right-color: #ff79da;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes size {
-  100% {
-    width: 0;
-    height: 0;
-    transform: translateY(-9999px);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

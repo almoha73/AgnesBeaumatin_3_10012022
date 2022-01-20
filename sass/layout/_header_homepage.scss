@@ -1,19 +1,5 @@
 @use "../abstracts";
 
-
-@keyframes slide-in-top {
-    0% {
-      
-    transform: translateX(-1000px);
-      opacity: 0;
-    }
-    100% {
-      
-    transform: translateY(0);
-    opacity: 1;
-    }
-}
-
 .header__button{
   @include abstracts.bouton;
   width: 250px;
@@ -40,9 +26,7 @@ header.header__homepage{
     color: abstracts.$color-black;
     background-color: abstracts.$color-white;
     line-height: auto;
-    animation: slide-in-top 0.8s 2s ease-out both; 
-
-    
+    animation: slide_in_top 1s 3s ease-out both; 
   }
   .local{
     @include abstracts.flex(flex, center, center, 0, 0); 

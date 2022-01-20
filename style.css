@@ -264,7 +264,7 @@ header.header__homepage h3 {
 .restaurant-menu__heart--solid:hover {
   opacity: 1;
   transition: 600ms 150ms linear;
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 html {
@@ -599,31 +599,18 @@ aside a {
 .restaurant-card__text .restaurant-card__heart--solid:hover {
   opacity: 1;
   transition: 600ms 150ms linear;
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
-.restaurant-card__text .restaurant-card__heart--border {
+.restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
   bottom: 60%;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border {
+  .restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
     bottom: 50%;
   }
 }
 @media (min-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border {
-    bottom: 90%;
-  }
-}
-.restaurant-card__text .restaurant-card__heart--solid {
-  bottom: 60%;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--solid {
-    bottom: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--solid {
+  .restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
     bottom: 90%;
   }
 }
@@ -637,6 +624,7 @@ section a.palette::after, section a.note::after {
   width: 25%;
   height: 12%;
   background-color: #99e2d0;
+  border-radius: 3px;
   position: absolute;
   line-height: 6vmin;
   text-align: center;

@@ -99,7 +99,7 @@
         @include abstracts.heartMenu;
         left: 85%;
         bottom: 50%;
-        &--border{
+        &--border, &--solid{
             bottom: 60%;
             @media (min-width: 768px) and (max-width: 992px){
                 bottom: 50%;
@@ -108,15 +108,7 @@
                 bottom: 90%
             }
         }
-        &--solid{
-            bottom: 60%;
-            @media (min-width: 768px) and (max-width: 992px){
-                bottom: 50%;
-            }
-            @media (min-width: 992px){
-                bottom: 90%
-            }
-        }   
+
     }
     
 }
@@ -128,6 +120,7 @@ section a.palette, section a.note{
       font-size: 4vmin;
       @include abstracts.widthHeight(25%, 12%);
       background-color:abstracts.$color-tertiary;
+      border-radius: 3px;
       position: absolute;
       line-height: 6vmin;
       text-align: center;

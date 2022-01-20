@@ -20,7 +20,8 @@
 }
 .header__button:hover {
   opacity: 0.9;
-  box-shadow: 0px 5px 14px -2px #9356dc;
+  box-shadow: 0px 5px 14px -2px #4f0aa3;
+  transform: scale(1.02);
 }
 
 .header-button {
@@ -508,7 +509,7 @@ aside a {
   background: white;
   position: relative;
   bottom: 31%;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 2rem 2rem;
   padding-top: 1vmax;
   padding-bottom: 1vmax;
 }
@@ -845,7 +846,8 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
 }
 .header__button--menu:hover {
   opacity: 0.9;
-  box-shadow: 0px 5px 14px -2px #9356dc;
+  box-shadow: 0px 5px 14px -2px #4f0aa3;
+  transform: scale(1.02);
 }
 
 footer {

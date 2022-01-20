@@ -854,8 +854,8 @@ footer {
   align-items: flex-start;
   flex-wrap: nowrap;
   flex-direction: column;
-  height: auto;
   width: 100%;
+  height: auto;
   padding: 6%;
   font-size: 2vmax;
   background-color: #353535;

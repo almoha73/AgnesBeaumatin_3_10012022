@@ -2,8 +2,7 @@
 
 footer{
     @include abstracts.flex(flex, flex-start, flex-start, nowrap, column);
-    height: auto;
-    width: 100%;
+    @include abstracts.widthHeight(100%, auto);
     padding: 6%;
     font-size: 2vmax;
     background-color: abstracts.$color-grey;
@@ -60,8 +59,7 @@ footer{
             }
             @media (min-width: 992px){
                 justify-content: center;
-                width: 20%;
-                height: 4vmin;
+                @include abstracts.widthHeight(20%, 4vmin);
             }
             
         & p{
@@ -83,8 +81,7 @@ footer{
         @media (min-width: 992px){
             justify-content: center;
             line-height: 4vmin;
-            width: 20%;
-            height: 4vmin;
+            @include abstracts.widthHeight(20%, 4vmin);
         }
     }
    .footer__mail {
@@ -92,8 +89,7 @@ footer{
         @media (min-width: 992px){
             text-align: center;
             line-height: 4vmin;
-            width: 20%;
-            height: 4vmin;
+            @include abstracts.widthHeight(20%, 4vmin);
         }
     } 
 

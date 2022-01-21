@@ -32,12 +32,14 @@ footer{
     & img{
         height: 20px;
         margin-bottom: 5vmin;
-        margin-left: 5%;
+        margin-left: 0;
         @media (min-width: 768px){
             margin-bottom: 2%;
+            margin-left: 0;
         }
         @media (min-width: 992px){
             margin-bottom: 0;
+            margin-left: 5%;
         }
     }
     .fa-utensils{

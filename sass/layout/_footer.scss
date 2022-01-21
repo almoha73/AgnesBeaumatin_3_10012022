@@ -3,94 +3,54 @@
 footer{
     @include abstracts.flex(flex, flex-start, flex-start, nowrap, column);
     @include abstracts.widthHeight(100%, auto);
-    padding: 6%;
+    padding: 8% 8% 12% 8%;
     font-size: 2vmax;
     background-color: abstracts.$color-grey;
     color: abstracts.$color-white;
-        @media (min-width: 768px) and (max-width: 992px){
+        @media (min-width: 768px){
             @include abstracts.flex(0, center, center, nowrap, column);
             padding: 4% 0;
         }
         @media (min-width: 992px){
-            @include abstracts.flex(flex, center, center, nowrap, row);
+            @include abstracts.flex(flex, start, center, nowrap, row);
             font-size: 1.3vmax;
             padding: 4% 0;
         }
-    & h2{
-        font-family: abstracts.$titre;
-        @include abstracts.fz_w_txta(3vmax, 100%, left);
-            @media (min-width: 768px) and (max-width: 992px){
+    & ul{
+        list-style-type: none;
+            @media (min-width: 768px){
                 text-align: center;
             }
             @media (min-width: 992px){
-                justify-content: center;
-                width: 20%;
+                width: 100%;
+                @include abstracts.flex(flex, space-evenly, center, nowrap, row);
             }
+    }
+    & li{
+        line-height: 27px;
+    }
+    & img{
+        height: 20px;
+        margin-bottom: 5vmin;
+        margin-left: 5%;
+        @media (min-width: 768px){
+            margin-bottom: 2%;
+        }
+        @media (min-width: 992px){
+            margin-bottom: 0;
+        }
+    }
+    .fa-utensils{
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    .fa-hands-helping{
+        margin-right: 10px;
+        font-size: 12px;
     }
     & a{
-        text-decoration: none;   
+        text-decoration: none; 
+        color: abstracts.$color-white;  
     }
-    .footer__ustensile{
-        @include abstracts.footer;
-            height: 3vmax;
-            line-height: 3vmax;
-            @media (min-width: 768px) and (max-width: 992px){
-                justify-content: center;
-            }
-            @media (min-width: 992px){
-                justify-content: center;
-                width: 20%;
-            }
-        & p{
-            margin-left: 2rem;
-            color: abstracts.$color-white;
-            line-height: 4vmin;
-        }
-        & i{
-            line-height: 4vmin;
-        }
-    }
-    .footer__partenaire{
-        @include abstracts.footer;
-        height: 3vmax;
-        line-height: 3vmax;
-            @media (min-width: 768px) and (max-width: 992px){
-                justify-content: center;
-            }
-            @media (min-width: 992px){
-                justify-content: center;
-                @include abstracts.widthHeight(20%, 4vmin);
-            }
-            
-        & p{
-            margin-left: 2rem;
-            color: abstracts.$color-white;
-            line-height: 4vmin;
-        }
-        & i{
-            line-height: 4vmin;
-            font-size: 2vmax;
-        }
-    }
-    .footer__mention{
-        @include abstracts.footer;
-        color: white;
-        @media (min-width: 768px) and (max-width: 992px){
-            justify-content: center;
-        }
-        @media (min-width: 992px){
-            justify-content: center;
-            line-height: 4vmin;
-            @include abstracts.widthHeight(20%, 4vmin);
-        }
-    }
-   .footer__mail {
-        color: abstracts.$color-white;
-        @media (min-width: 992px){
-            text-align: center;
-            line-height: 4vmin;
-            @include abstracts.widthHeight(20%, 4vmin);
-        }
-    } 
 
   }

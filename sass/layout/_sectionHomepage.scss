@@ -3,7 +3,7 @@
 .restaurant__choice{
     @include abstracts.widthHeight(100%, auto);
     @include abstracts.flex(flex, flex-start, center, wrap, column);
-        @media (min-width: 768px) and (max-width: 992px){
+        @media (min-width: 768px){
             @include abstracts.flex(flex, center, center, wrap, row);
             gap: 2vmax;
         }
@@ -13,7 +13,7 @@
             @include abstracts.widthHeight(65%, auto);
         } 
     & a{
-        @include abstracts.widthHeight(95%, 55vmin);
+        @include abstracts.widthHeight(93%, 63vmin);
         text-decoration: none;
         color: abstracts.$color-black;
         display: block;
@@ -24,7 +24,7 @@
             border-radius: 2rem;
             transform: scale(1.01);
             }
-            @media (min-width: 768px) and (max-width: 992px){
+            @media (min-width: 768px){
                 @include abstracts.widthHeight(45%, 30vmin); 
             }
             @media (min-width: 992px){
@@ -44,7 +44,7 @@
         align-items: flex-start;
         width: 95%;
         margin-bottom: 20px;
-        @media (min-width: 768px) and (max-width: 992px){
+        @media (min-width: 768px){
             width: 92%;
         }
         @media (min-width: 992px){
@@ -73,7 +73,7 @@
     border-radius: 0 0 2rem 2rem;
     padding-top: 1vmax;  
     padding-bottom: 1vmax;
-        @media (min-width: 768px) and (max-width: 992px){
+        @media (min-width: 768px){
             @include abstracts.widthHeight(100%, 24%);
             bottom: 25%;    
         }
@@ -86,7 +86,7 @@
       
       padding-left: 2vmin;
       
-      @media (min-width: 768px) and (max-width: 992px){
+      @media (min-width: 768px){
         @include abstracts.fz_lh(2vmin, 2.5vmin);
       }
       @media (min-width: 992px){
@@ -101,7 +101,7 @@
         bottom: 50%;
         &--border, &--solid{
             bottom: 60%;
-            @media (min-width: 768px) and (max-width: 992px){
+            @media (min-width: 768px){
                 bottom: 50%;
             }
             @media (min-width: 992px){
@@ -128,7 +128,7 @@ section a.palette, section a.note{
       bottom: 82%;
       z-index: 2;
       right: 4%;
-      @media (min-width: 768px) and (max-width: 992px){
+      @media (min-width: 768px){
         @include abstracts.fz_lh(1.8vmin, 3.6vmin);
       }
       @media (min-width: 992px){

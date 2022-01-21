@@ -11,9 +11,9 @@
         margin-left: 0;   
     }
     .restaurant__section{
-        width: 96%;
+        width: 92%;
         margin-bottom: 20px;
-        @media (min-width: 768px) and (max-width: 992px){
+        @media (min-width: 768px){
             @include abstracts.flex(flex, space-evenly, center, wrap, row);
         }
         @media (min-width: 992px){
@@ -47,7 +47,8 @@ article{
     margin-bottom: 5px;
     margin-top: 15px;
     overflow: hidden;
-    @media (min-width: 768px) and (max-width: 992px){
+    box-shadow: 0px 5px 10px 2px abstracts.$color-background2;
+    @media (min-width: 768px){
         width: 45%;
     }
     @media (min-width: 992px){
@@ -82,7 +83,6 @@ article{
         @include abstracts.flex(flex, space-evenly, 0, 0, column);
         border-radius: 1rem;
         background-color: abstracts.$color-white;
-        box-shadow: -1px 2px 12px 8px rgba(229,229,229,0.75);
         overflow: hidden;
         white-space: nowrap;
         padding-left: 10px;
@@ -105,6 +105,7 @@ article{
             & span{
                 padding: 0 1em 0 1em;
                 flex-shrink: 0;
+                font-weight: 900;
                 }
             }
     }

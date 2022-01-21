@@ -83,7 +83,7 @@
     margin-top: 20vmax;
     background-color: abstracts.$color-background;
     z-index: 5;
-    @media (min-width: 768px) and (max-width: 992px){
+    @media (min-width: 768px){
         width: 100%;
     }
     @media (min-width: 992px){

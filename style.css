@@ -902,7 +902,7 @@ footer img {
 @media (min-width: 768px) {
   footer img {
     margin-bottom: 2%;
-    margin-left: 0;
+    margin-left: 0px;
   }
 }
 @media (min-width: 992px) {

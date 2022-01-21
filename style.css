@@ -787,7 +787,6 @@ article .plats .plat > p, article .entrees .plat > p, article .desserts .plat > 
 }
 article .plats .plat span, article .entrees .plat span, article .desserts .plat span {
   padding: 0 1em 0 1em;
-  flex-shrink: 0;
   font-weight: 900;
 }
 
@@ -886,12 +885,12 @@ footer li {
   line-height: 27px;
 }
 footer img {
-  height: 20px;
+  height: 2vmax;
+  margin-bottom: 5vmin;
 }
 @media (min-width: 768px) {
   footer img {
     margin-bottom: 2%;
-    margin-left: 0px;
   }
 }
 @media (min-width: 992px) {

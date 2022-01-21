@@ -30,12 +30,11 @@ footer{
         line-height: 27px;
     }
     & img{
-        height: 20px;
-        // margin-bottom: 5vmin;
-        // margin-left: 0;
+        height: 2vmax;
+        margin-bottom: 5vmin;
         @media (min-width: 768px){
             margin-bottom: 2%;
-            margin-left: 0px;
+            
         }
         @media (min-width: 992px){
             margin-bottom: 0;

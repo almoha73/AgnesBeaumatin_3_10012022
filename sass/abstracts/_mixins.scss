@@ -84,8 +84,8 @@
           }
       &:hover{
         opacity: 1;
-        transition:  600ms 150ms linear ;
-        transform: scale(1.06)
+        transition: 500ms ease-out ;
+        transform: scale(1.1)
       }
     }
 }

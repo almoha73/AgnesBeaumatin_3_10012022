@@ -2,12 +2,12 @@
 
 .principal{
     @include abstracts.widthHeight(100%, auto);
-    @include abstracts.flex(flex, 0, center, 0, column);
+    @include abstracts.flex(flex, inherit, center, inherit, column);
     padding-bottom: 25px;
     background-color: abstracts.$color-background;
     @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, auto);
-        @include abstracts.flex(flex, space-evenly, center, wrap, 0);
+        @include abstracts.flex(flex, space-evenly, center, wrap, column);
         margin-left: 0;   
     }
     .restaurant__section{
@@ -16,10 +16,10 @@
         @media (min-width: 768px){
             @include abstracts.flex(flex, space-evenly, center, wrap, row);
         }
-        @media (min-width: 992px){
-            @include abstracts.flex(flex, space-evenly, center, wrap, row);
+        // @media (min-width: 992px){
+        //     @include abstracts.flex(flex, space-evenly, center, wrap, row);
             
-        }
+        // }
     }
     .restaurant__section > p{
         position: relative;

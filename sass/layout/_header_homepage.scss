@@ -1,16 +1,16 @@
 @use "../abstracts";
 
-.header__button{
-  @include abstracts.bouton;
-  width: 250px;
+// .header__button{
+//   @include abstracts.bouton;
+//   width: 250px;
 
-}
-.header-button{
-text-decoration: none;
-@media (min-width: 992px){
-    padding-bottom: 5vmin;
-}
-}
+// }
+// .header-button{
+// text-decoration: none;
+// @media (min-width: 992px){
+//     padding-bottom: 5vmin;
+// }
+// }
 
 header.header__homepage{
   height: auto;
@@ -18,7 +18,7 @@ header.header__homepage{
   padding-bottom: 6vmax;
   @include abstracts.flex(flex, center, center, wrap, column); 
     @media (min-width: 992px){
-        padding-bottom: 0;
+        padding-bottom: 30px;
     }
   .header__title--accueil{
     @include abstracts.fz_w_txta(10vmin, 100%, center);
@@ -43,10 +43,18 @@ header.header__homepage{
   }
   & h2{ 
     @include abstracts.fz_w_txta(2.6rem, 70%, center);
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
   & h3{
     @include abstracts.fz_w_txta(1.7rem, 88%, center);
     font-weight: normal;
+    padding-bottom: 30px;
   }
+  & .header__button{
+    @include abstracts.bouton;
+    width: 220px;
+
+  }
+  
 }

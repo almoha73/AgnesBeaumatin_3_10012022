@@ -13,8 +13,9 @@
   }
 @keyframes size {
   100%{
-    @include abstracts.widthHeight(0, 0);  
-    transform: translateY(-9999px);
+    display: none;
+    // @include abstracts.widthHeight(0, 0);  
+    // transform: translateY(-9999px);
   }
 }  
 

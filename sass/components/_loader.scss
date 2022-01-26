@@ -1,28 +1,28 @@
 @use "../abstracts";
 
-.loader__home{
-    @include abstracts.flex(flex, center, center, 0, 0);
-    @include abstracts.widthHeight(100%, 100vh);
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    background-color: abstracts.$color-background2;
-    animation: size 1ms linear 3s forwards;
-}
-  .loader {
-    @include abstracts.widthHeight(250px, 250px);  
-    div {
-      height: 100%;
-    }
-  }
-  .loader, .loader div {
-    border-radius: 50%;
-    padding: 10px;
-    border: 6px solid transparent;
-    animation: rotate cubic-bezier(.05,.23,.47,.88) 3s infinite;
-    border-top-color: abstracts.$color-tertiary;
-    border-right-color: abstracts.$color-primary;
-  } 
+// .loader__home{
+//     @include abstracts.flex(flex, center, center, 0, 0);
+//     @include abstracts.widthHeight(100%, 100vh);
+//     position: fixed;
+//     top: 0;
+//     z-index: 10;
+//     background-color: abstracts.$color-background2;
+//     animation: size 1ms linear 3s forwards;
+// }
+//   .loader {
+//     @include abstracts.widthHeight(250px, 250px);  
+//     div {
+//       height: 100%;
+//     }
+//   }
+//   .loader, .loader div {
+//     border-radius: 50%;
+//     padding: 10px;
+//     border: 6px solid transparent;
+//     animation: rotate cubic-bezier(.05,.23,.47,.88) 3s infinite;
+//     border-top-color: abstracts.$color-tertiary;
+//     border-right-color: abstracts.$color-primary;
+//   } 
 
 
 

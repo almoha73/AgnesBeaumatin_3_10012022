@@ -199,7 +199,6 @@ header.header__homepage h3 {
   display: inline-block;
   bottom: 50px;
   left: 400px;
-  z-index: 999;
 }
 .restaurant-menu .icon svg {
   overflow: visible;
@@ -524,7 +523,6 @@ aside a {
   display: inline-block;
   bottom: 50px;
   left: 400px;
-  z-index: 999;
 }
 .restaurant-card__text .icon svg {
   overflow: visible;

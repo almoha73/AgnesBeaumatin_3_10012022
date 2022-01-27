@@ -72,12 +72,12 @@
         }
       
         path {
-          stroke-dashoffset: 0;
-          stroke-dasharray: 1550;
-          transform-origin: center;
+          stroke-dashoffset: 0; // le coeur est entier
+          stroke-dasharray: 1550; // dash max qui va servir pour l'animation
+          transform-origin: center;// le coeur va pulser sans se décaler
         }
       
-        .heart-background {
+        .heart-background { //le deuxième coeur est positionné sur le premier
           position: absolute;
           left: 0;
           right: 0;

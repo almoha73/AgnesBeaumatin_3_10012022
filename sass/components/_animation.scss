@@ -2,7 +2,7 @@
 
 @keyframes stroke-animation {
   0% {
-    stroke: abstracts.$color-primary;
+    stroke: abstracts.$color-primary; //animation du contour en rose
     stroke-dashoffset: 0;
   }
   30% {
@@ -11,12 +11,12 @@
   }
   60% {
     stroke-dashoffset: 750;
-    fill: transparent;
+    fill: transparent; // aide à faire une transition plus douce vers le linear gradient
     transform: scale(1.1);
   }
   80% {
     stroke-dashoffset: 1000;
-    fill: url(#grad1);
+    fill: url(#grad1);//appel du linear gradient du html par son ID
     transform: scale(1.3);
   }
   90% {
@@ -26,7 +26,7 @@
   100% {
     stroke: abstracts.$color-secondary; 
     stroke-dashoffset: 1550;
-    stroke-width: 10;
+    stroke-width: 10; //stroke très léger pour éviter de voir la bordure noire du début d l'animation
     fill: url(#grad1);
     transform: scale(1);
   }

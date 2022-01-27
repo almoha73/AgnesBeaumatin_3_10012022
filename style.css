@@ -221,7 +221,7 @@ header.header__homepage h3 {
   stroke: none;
 }
 .restaurant-menu .icon .heart-main:hover path {
-  animation: stroke-animation 1s ease-in-out forwards;
+  animation: stroke-animation 0.7s linear forwards;
 }
 .restaurant-menu .icon {
   bottom: 0px;
@@ -539,7 +539,7 @@ aside a {
   stroke: none;
 }
 .restaurant-card__text .icon .heart-main:hover path {
-  animation: stroke-animation 1s ease-in-out forwards;
+  animation: stroke-animation 0.7s linear forwards;
 }
 .restaurant-card__text .icon {
   left: 85%;
@@ -874,25 +874,29 @@ footer a {
     stroke-dashoffset: 0;
   }
   30% {
-    stroke-dashoffset: 1550;
+    stroke-dashoffset: 400;
+    transform: scale(1);
   }
   60% {
-    stroke-dashoffset: 3100;
+    stroke-dashoffset: 750;
     fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: url(#grad1);
     transform: scale(1.1);
   }
+  80% {
+    stroke-dashoffset: 1000;
+    fill: url(#grad1);
+    transform: scale(1.3);
+  }
   90% {
-    transform: scale(1);
+    stroke-dashoffset: 1250;
+    transform: scale(1.1);
   }
   100% {
     stroke: #9356dc;
-    stroke-dashoffset: 3100;
+    stroke-dashoffset: 1550;
     stroke-width: 10;
     fill: url(#grad1);
+    transform: scale(1);
   }
 }
 @keyframes rotate {

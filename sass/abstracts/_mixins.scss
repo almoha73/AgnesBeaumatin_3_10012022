@@ -63,18 +63,11 @@
         display: inline-block;
         bottom: 50px;
         left: 400px;
-        
+        z-index: 10;
         svg {
           overflow: visible;
           width: 32px;
             & .gradient1 { fill: url("#grad1");  }
-            & use {
-                transition: 3s;
-                opacity: 0;
-            &:hover use {
-                    opacity: 1;
-                }  
-            }
          
         }
       

@@ -199,6 +199,7 @@ header.header__homepage h3 {
   display: inline-block;
   bottom: 50px;
   left: 400px;
+  z-index: 10;
 }
 .restaurant-menu .icon svg {
   overflow: visible;
@@ -206,13 +207,6 @@ header.header__homepage h3 {
 }
 .restaurant-menu .icon svg .gradient1 {
   fill: url("#grad1");
-}
-.restaurant-menu .icon svg use {
-  transition: 3s;
-  opacity: 0;
-}
-.restaurant-menu .icon svg use:hover use {
-  opacity: 1;
 }
 .restaurant-menu .icon path {
   stroke-dashoffset: 0;
@@ -523,6 +517,7 @@ aside a {
   display: inline-block;
   bottom: 50px;
   left: 400px;
+  z-index: 10;
 }
 .restaurant-card__text .icon svg {
   overflow: visible;
@@ -530,13 +525,6 @@ aside a {
 }
 .restaurant-card__text .icon svg .gradient1 {
   fill: url("#grad1");
-}
-.restaurant-card__text .icon svg use {
-  transition: 3s;
-  opacity: 0;
-}
-.restaurant-card__text .icon svg use:hover use {
-  opacity: 1;
 }
 .restaurant-card__text .icon path {
   stroke-dashoffset: 0;
@@ -983,7 +971,7 @@ footer a {
   height: 100vh;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 9999;
   background-color: #eaeaea;
   animation: size 1ms linear 3s forwards;
 }

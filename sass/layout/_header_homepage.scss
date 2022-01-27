@@ -51,10 +51,10 @@ header.header__homepage{
     font-weight: normal;
     padding-bottom: 30px;
   }
-  & .header__button{
-    @include abstracts.bouton;
-    width: 220px;
+  // & .header__button{
+  //   @include abstracts.bouton;
+  //   width: 220px;
 
-  }
+  // }
   
 }

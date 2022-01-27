@@ -95,21 +95,41 @@
         padding-left: 2vmin;
     }
     }
-    .restaurant-card__heart{
-        @include abstracts.heartMenu;
+    @include abstracts.heart;
+    .icon{
         left: 85%;
-        bottom: 50%;
-        &--border, &--solid{
-            bottom: 60%;
+        bottom: 9vmin;
+        @media (min-width: 768px){
+            bottom: 4vmax;
+        }
+        @media (min-width: 992px){
+            bottom: 3.5vmax;
+        }
+        svg{
+            width: 7vmin;
             @media (min-width: 768px){
-                bottom: 50%;
+                width: 3.5vmax;
             }
             @media (min-width: 992px){
-                bottom: 90%
+                width: 2.3vmax;
             }
         }
-
     }
+    // .restaurant-card__heart{
+    //     @include abstracts.heartMenu;
+    //     left: 85%;
+    //     bottom: 50%;
+    //     &--border, &--solid{
+    //         bottom: 60%;
+    //         @media (min-width: 768px){
+    //             bottom: 50%;
+    //         }
+    //         @media (min-width: 992px){
+    //             bottom: 90%
+    //         }
+    //     }
+
+    // }
     
 }
    

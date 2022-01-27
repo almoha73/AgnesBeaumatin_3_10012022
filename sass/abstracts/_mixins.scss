@@ -53,41 +53,89 @@
     }
 }
 
-@mixin heartMenu{
-    position: relative;
-    width: 3vmax;
-    height: 3vmax;
-    @media (min-width: 768px) and (max-width: 992px){
-            width: 4vmin;
-            height: 4vmin;
-    }
-    &--border{
-      width: 100%;
-      height: auto;
-      position: absolute;
-      @media (min-width: 768px) and (max-width: 992px){
-        @include widthHeight(100%, 100%); 
-    }
-        @media (min-width: 992px){
-            @include widthHeight(2.5vmax, 2.5vmax); 
+@mixin heart{
+    .icon {
+        fill: transparent;
+        stroke: black;
+        stroke-width: 40;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        bottom: 50px;
+        left: 400px;
+        svg {
+          overflow: visible;
+          width: 32px;
+            & .gradient1 { fill: url("#grad1");  }
+            & use {
+                transition: 3s;
+                opacity: 0;
+            &:hover use {
+                    opacity: 1;
+                }  
+            }
+         
         }
-    }
-    &--solid{
-      width: 100%;
-      height: auto;
-      opacity: 0;
-      position: absolute;
-      transform: scale(1);
-        @media (min-width: 768px) and (max-width: 992px){
-            @include widthHeight(100%, 100%); 
+      
+        path {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 1550;
+          transform-origin: center;
         }
-        @media (min-width: 992px){
-            @include widthHeight(2.5vmax, 2.5vmax); 
-          }
-      &:hover{
-        opacity: 1;
-        transition: 500ms ease-out ;
-        transform: scale(1.1)
+      
+        .heart-background {
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          stroke: none;
+        }
+      
+        .heart-main:hover path {
+          animation: stroke-animation 1s ease-in-out forwards;
+        }
+      
+        // .heart-main:hover ~ .heart-background path {
+        //   animation: fade-animation 2s ease-in-out forwards;
+        // }
       }
-    }
 }
+
+// @mixin heartMenu{
+//     position: relative;
+//     width: 3vmax;
+//     height: 3vmax;
+//     @media (min-width: 768px) and (max-width: 992px){
+//             width: 4vmin;
+//             height: 4vmin;
+//     }
+//     &--border{
+//       width: 100%;
+//       height: auto;
+//       position: absolute;
+//       @media (min-width: 768px) and (max-width: 992px){
+//         @include widthHeight(100%, 100%); 
+//     }
+//         @media (min-width: 992px){
+//             @include widthHeight(2.5vmax, 2.5vmax); 
+//         }
+//     }
+//     &--solid{
+//       width: 100%;
+//       height: auto;
+//       opacity: 0;
+//       position: absolute;
+//       transform: scale(1);
+//         @media (min-width: 768px) and (max-width: 992px){
+//             @include widthHeight(100%, 100%); 
+//         }
+//         @media (min-width: 992px){
+//             @include widthHeight(2.5vmax, 2.5vmax); 
+//           }
+//       &:hover{
+//         opacity: 1;
+//         transition: 500ms ease-out ;
+//         transform: scale(1.1)
+//       }
+//     }
+// }

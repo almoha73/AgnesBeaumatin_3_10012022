@@ -66,23 +66,6 @@ header.header__homepage h3 {
   font-weight: normal;
   padding-bottom: 30px;
 }
-header.header__homepage .header__button {
-  display: block;
-  padding: 17px;
-  border-radius: 3rem;
-  border: none;
-  background: linear-gradient(#ff79d4 0%, #9356dc 100%);
-  color: #fff;
-  font-size: 1.6vh;
-  font-weight: 500;
-  box-shadow: 0px 3px 12px -2px #9356dc;
-  width: 220px;
-}
-header.header__homepage .header__button:hover {
-  opacity: 0.9;
-  box-shadow: 0px 5px 14px -2px #4f0aa3;
-  transform: scale(1.02);
-}
 
 .header_restaurant {
   width: 100%;
@@ -207,58 +190,48 @@ header.header__homepage .header__button:hover {
   font-size: 2.8vmax;
   font-family: "Shrikhand", cursive;
 }
-
-.restaurant-menu__heart {
+.restaurant-menu .icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 40;
+  cursor: pointer;
   position: relative;
-  width: 3vmax;
-  height: 3vmax;
+  display: inline-block;
+  bottom: 50px;
+  left: 400px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-menu__heart {
-    width: 4vmin;
-    height: 4vmin;
-  }
+.restaurant-menu .icon svg {
+  overflow: visible;
+  width: 32px;
 }
-.restaurant-menu__heart--border {
-  width: 100%;
-  height: auto;
-  position: absolute;
+.restaurant-menu .icon svg .gradient1 {
+  fill: url("#grad1");
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-menu__heart--border {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurant-menu__heart--border {
-    width: 2.5vmax;
-    height: 2.5vmax;
-  }
-}
-.restaurant-menu__heart--solid {
-  width: 100%;
-  height: auto;
+.restaurant-menu .icon svg use {
+  transition: 3s;
   opacity: 0;
-  position: absolute;
-  transform: scale(1);
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-menu__heart--solid {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurant-menu__heart--solid {
-    width: 2.5vmax;
-    height: 2.5vmax;
-  }
-}
-.restaurant-menu__heart--solid:hover {
+.restaurant-menu .icon svg use:hover use {
   opacity: 1;
-  transition: 500ms ease-out;
-  transform: scale(1.1);
+}
+.restaurant-menu .icon path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+.restaurant-menu .icon .heart-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+.restaurant-menu .icon .heart-main:hover path {
+  animation: stroke-animation 1s ease-in-out forwards;
+}
+.restaurant-menu .icon {
+  bottom: 0px;
+  left: 0;
 }
 
 html {
@@ -541,71 +514,70 @@ aside a {
     padding-left: 2vmin;
   }
 }
-.restaurant-card__text .restaurant-card__heart {
+.restaurant-card__text .icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 40;
+  cursor: pointer;
   position: relative;
-  width: 3vmax;
-  height: 3vmax;
-  left: 85%;
-  bottom: 50%;
+  display: inline-block;
+  bottom: 50px;
+  left: 400px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart {
-    width: 4vmin;
-    height: 4vmin;
-  }
+.restaurant-card__text .icon svg {
+  overflow: visible;
+  width: 32px;
 }
-.restaurant-card__text .restaurant-card__heart--border {
-  width: 100%;
-  height: auto;
-  position: absolute;
+.restaurant-card__text .icon svg .gradient1 {
+  fill: url("#grad1");
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border {
-    width: 2.5vmax;
-    height: 2.5vmax;
-  }
-}
-.restaurant-card__text .restaurant-card__heart--solid {
-  width: 100%;
-  height: auto;
+.restaurant-card__text .icon svg use {
+  transition: 3s;
   opacity: 0;
-  position: absolute;
-  transform: scale(1);
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--solid {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--solid {
-    width: 2.5vmax;
-    height: 2.5vmax;
-  }
-}
-.restaurant-card__text .restaurant-card__heart--solid:hover {
+.restaurant-card__text .icon svg use:hover use {
   opacity: 1;
-  transition: 500ms ease-out;
-  transform: scale(1.1);
 }
-.restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
-  bottom: 60%;
+.restaurant-card__text .icon path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+.restaurant-card__text .icon .heart-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+.restaurant-card__text .icon .heart-main:hover path {
+  animation: stroke-animation 1s ease-in-out forwards;
+}
+.restaurant-card__text .icon {
+  left: 85%;
+  bottom: 9vmin;
 }
 @media (min-width: 768px) {
-  .restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
-    bottom: 50%;
+  .restaurant-card__text .icon {
+    bottom: 4vmax;
   }
 }
 @media (min-width: 992px) {
-  .restaurant-card__text .restaurant-card__heart--border, .restaurant-card__text .restaurant-card__heart--solid {
-    bottom: 90%;
+  .restaurant-card__text .icon {
+    bottom: 3.5vmax;
+  }
+}
+.restaurant-card__text .icon svg {
+  width: 7vmin;
+}
+@media (min-width: 768px) {
+  .restaurant-card__text .icon svg {
+    width: 3.5vmax;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant-card__text .icon svg {
+    width: 2.3vmax;
   }
 }
 
@@ -908,6 +880,33 @@ footer a {
   color: #fff;
 }
 
+@keyframes stroke-animation {
+  0% {
+    stroke: #ff79da;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: url(#grad1);
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke: #9356dc;
+    stroke-dashoffset: 3100;
+    stroke-width: 10;
+    fill: url(#grad1);
+  }
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -921,7 +920,10 @@ footer a {
 }
 @keyframes size {
   100% {
-    display: none;
+    /*display none ne marche pas*/
+    width: 0;
+    height: 0;
+    transform: translateY(-9999px);
   }
 }
 @keyframes slide_in_top {

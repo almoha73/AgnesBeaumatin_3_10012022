@@ -1,5 +1,35 @@
 @use "../abstracts";
 
+@keyframes stroke-animation {
+  0% {
+    stroke: abstracts.$color-primary;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    
+    fill: url(#grad1);
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke: abstracts.$color-secondary; 
+    stroke-dashoffset: 3100;
+    stroke-width: 10;
+    fill: url(#grad1);
+  }
+}
+
+
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
@@ -13,9 +43,9 @@
   }
 @keyframes size {
   100%{
-    display: none;
-    // @include abstracts.widthHeight(0, 0);  
-    // transform: translateY(-9999px);
+    /*display none ne marche pas*/
+    @include abstracts.widthHeight(0, 0);  
+    transform: translateY(-9999px);
   }
 }  
 

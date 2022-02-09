@@ -78,7 +78,7 @@
 
   .restaurant-menu{ 
     @include abstracts.widthHeight(100%, 10vmax);
-    @include abstracts.flex(flex, center, center, 0, 0);
+    @include abstracts.flex(flex, center, center, nowrap, row);
     border-radius: 3rem 3rem 0 0;
     margin-top: 20vmax;
     background-color: abstracts.$color-background;

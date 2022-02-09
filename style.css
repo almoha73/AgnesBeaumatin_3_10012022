@@ -30,15 +30,14 @@ header.header__homepage .header__title--accueil {
   font-family: "Shrikhand", cursive;
   color: #000;
   background-color: #fff;
-  line-height: auto;
   animation: slide_in_top 1s 3s ease-out both;
 }
 header.header__homepage .local {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: 0;
-  flex-direction: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
   width: 100%;
   height: 70px;
   background: linear-gradient(0deg, #eaeaea 88%, #cfcfcf 100%);
@@ -167,8 +166,8 @@ header.header__homepage h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: 0;
-  flex-direction: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
   border-radius: 3rem 3rem 0 0;
   margin-top: 20vmax;
   background-color: #f6f6f6;
@@ -274,7 +273,7 @@ aside {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: 0;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 50px;
   background-color: #fff;
@@ -710,8 +709,8 @@ article .plats, article .entrees, article .desserts {
   height: 67px;
   display: flex;
   justify-content: space-evenly;
-  align-items: 0;
-  flex-wrap: 0;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   flex-direction: column;
   border-radius: 1rem;
   background-color: #fff;
@@ -731,8 +730,8 @@ article .plats > p, article .entrees > p, article .desserts > p {
 article .plats .plat, article .entrees .plat, article .desserts .plat {
   display: flex;
   justify-content: space-between;
-  align-items: 0;
-  flex-wrap: 0;
+  align-items: center;
+  flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
 }
@@ -748,7 +747,7 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: 0;
+  flex-wrap: nowrap;
   flex-direction: column;
   background-color: #99e2d0;
   color: white;
@@ -969,8 +968,8 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: 0;
-  flex-direction: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
   width: 100%;
   height: 100vh;
   position: fixed;

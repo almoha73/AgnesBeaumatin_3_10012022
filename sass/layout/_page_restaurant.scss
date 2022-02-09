@@ -80,7 +80,7 @@ article{
 
     & .plats, & .entrees, & .desserts{
         @include abstracts.widthHeight(100%, 67px);
-        @include abstracts.flex(flex, space-evenly, 0, 0, column);
+        @include abstracts.flex(flex, space-evenly, flex-start, nowrap, column);
         border-radius: 1rem;
         background-color: abstracts.$color-white;
         overflow: hidden;
@@ -97,7 +97,7 @@ article{
         }
         
         & .plat{
-            @include abstracts.flex(flex, space-between, 0, 0, row);
+            @include abstracts.flex(flex, space-between, center, nowrap, row);
             width: 100%;
             & > p{
                 font-size: 0.8em;
@@ -110,7 +110,7 @@ article{
     }
 }
 .check{
-    @include abstracts.flex(flex, center, center, 0, column);
+    @include abstracts.flex(flex, center, center, nowrap, column);
     background-color: abstracts.$color-tertiary;
     color: white;
     @include abstracts.widthHeight(80px, 67px);

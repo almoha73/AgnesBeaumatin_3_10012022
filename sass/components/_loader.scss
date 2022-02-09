@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 .loader__home{
-    @include abstracts.flex(flex, center, center, 0, 0);
+    @include abstracts.flex(flex, center, center, nowrap, row);
     @include abstracts.widthHeight(100%, 100vh);
     position: fixed;
     top: 0;

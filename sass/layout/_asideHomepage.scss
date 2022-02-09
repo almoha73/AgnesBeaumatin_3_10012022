@@ -28,7 +28,7 @@ main{
     
 aside{
     @include abstracts.widthHeight(100%, auto);
-    @include abstracts.flex(flex, flex-start, center, 0, column);
+    @include abstracts.flex(flex, flex-start, center, nowrap, column);
     margin-bottom: 50px;
     background-color: abstracts.$color-white;
         @media (min-width: 768px){

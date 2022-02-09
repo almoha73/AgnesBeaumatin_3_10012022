@@ -3,7 +3,7 @@
 .principal{
     @include abstracts.widthHeight(100%, auto);
     @include abstracts.flex(flex, inherit, center, inherit, column);
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     background-color: abstracts.$color-background;
     @media (min-width: 768px) and (max-width: 992px){
         @include abstracts.widthHeight(100%, auto);
@@ -16,16 +16,13 @@
         @media (min-width: 768px){
             @include abstracts.flex(flex, space-evenly, center, wrap, row);
         }
-        // @media (min-width: 992px){
-        //     @include abstracts.flex(flex, space-evenly, center, wrap, row);
-            
-        // }
     }
-    .restaurant__section > p{
+    .restaurant__section > h4{
         position: relative;
         width: 96%;
         margin-left: 2%;
         margin-bottom: 25px;
+        font-weight: normal;
             &::before{
             content: "";
             display: block;
@@ -91,7 +88,7 @@ article{
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        & > p{
+        & > h5{
             font-weight: bold;
             font-size: 0.9em;
         }
@@ -128,7 +125,6 @@ article{
 .header__button{
         @include abstracts.bouton;
         width: 200px;
-        margin-top: 100px;
         text-align: center;
         margin: auto;     
     }

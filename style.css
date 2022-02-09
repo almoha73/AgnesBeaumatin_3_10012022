@@ -433,7 +433,7 @@ aside a {
 }
 .restaurant__choice > h3 {
   align-items: flex-start;
-  width: 95%;
+  width: 92%;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
@@ -607,7 +607,7 @@ section a.palette::after, section a.note::after {
   align-items: center;
   flex-wrap: inherit;
   flex-direction: column;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
   background-color: #f6f6f6;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -635,13 +635,14 @@ section a.palette::after, section a.note::after {
     flex-direction: row;
   }
 }
-.principal .restaurant__section > p {
+.principal .restaurant__section > h4 {
   position: relative;
   width: 96%;
   margin-left: 2%;
   margin-bottom: 25px;
+  font-weight: normal;
 }
-.principal .restaurant__section > p::before {
+.principal .restaurant__section > h4::before {
   content: "";
   display: block;
   width: 40px;
@@ -652,7 +653,7 @@ section a.palette::after, section a.note::after {
   bottom: -8px;
 }
 @media (min-width: 992px) {
-  .principal .restaurant__section > p::before {
+  .principal .restaurant__section > h4::before {
     margin-left: 0;
   }
 }
@@ -723,7 +724,7 @@ article .plats p, article .entrees p, article .desserts p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-article .plats > p, article .entrees > p, article .desserts > p {
+article .plats > h5, article .entrees > h5, article .desserts > h5 {
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -774,7 +775,6 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
   font-weight: 500;
   box-shadow: 0px 3px 12px -2px #9356dc;
   width: 200px;
-  margin-top: 100px;
   text-align: center;
   margin: auto;
 }

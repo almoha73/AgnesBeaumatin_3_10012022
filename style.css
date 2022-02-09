@@ -624,7 +624,7 @@ section a.palette::after, section a.note::after {
 }
 .principal .restaurant__section {
   width: 92%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media (min-width: 768px) {
   .principal .restaurant__section {
@@ -641,6 +641,11 @@ section a.palette::after, section a.note::after {
   margin-left: 2%;
   margin-bottom: 25px;
   font-weight: normal;
+}
+@media (min-width: 768px) {
+  .principal .restaurant__section > h4 {
+    margin-bottom: 10px;
+  }
 }
 .principal .restaurant__section > h4::before {
   content: "";
@@ -720,7 +725,6 @@ article .plats, article .entrees, article .desserts {
   padding-left: 10px;
 }
 article .plats p, article .entrees p, article .desserts p {
-  font-size: 0.7em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -742,6 +746,7 @@ article .plats .plat > p, article .entrees .plat > p, article .desserts .plat > 
 article .plats .plat span, article .entrees .plat span, article .desserts .plat span {
   padding: 0 1em 0 1em;
   font-weight: 900;
+  font-size: 0.9em;
 }
 
 .check {

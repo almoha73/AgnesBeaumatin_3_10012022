@@ -16,7 +16,10 @@ footer{
             font-size: 1.3vmax;
             padding: 4% 0;
         }
-    & ul{
+    nav{
+        width: 100%;
+    }
+    ul{
         list-style-type: none;
             @media (min-width: 768px){
                 text-align: center;
@@ -26,10 +29,10 @@ footer{
                 @include abstracts.flex(flex, space-evenly, center, nowrap, row);
             }
     }
-    & li{
+     li{
         line-height: 27px;
     }
-    & img{
+     img{
         height: 2vmax;
         margin-bottom: 5vmin;
         @media (min-width: 768px){

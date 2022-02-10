@@ -196,16 +196,9 @@ header.header__homepage h3 {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  bottom: 50px;
-  left: 400px;
-  z-index: 10;
 }
 .restaurant-menu .icon svg {
   overflow: visible;
-  width: 32px;
-}
-.restaurant-menu .icon svg .gradient1 {
-  fill: url("#grad1");
 }
 .restaurant-menu .icon path {
   stroke-dashoffset: 0;
@@ -510,16 +503,9 @@ aside a {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  bottom: 50px;
-  left: 400px;
-  z-index: 10;
 }
 .restaurant-card__text .icon svg {
   overflow: visible;
-  width: 32px;
-}
-.restaurant-card__text .icon svg .gradient1 {
-  fill: url("#grad1");
 }
 .restaurant-card__text .icon path {
   stroke-dashoffset: 0;
@@ -886,12 +872,13 @@ footer a {
   }
   90% {
     stroke-dashoffset: 1250;
+    fill: url(#grad1);
     transform: scale(1.1);
   }
   100% {
-    stroke: #9356dc;
+    stroke: #ff79da;
     stroke-dashoffset: 1550;
-    stroke-width: 10;
+    stroke-width: 1;
     fill: url(#grad1);
     transform: scale(1);
   }

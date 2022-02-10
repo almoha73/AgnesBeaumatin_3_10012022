@@ -21,12 +21,13 @@
   }
   90% {
     stroke-dashoffset: 1250;
+    fill: url(#grad1);
     transform: scale(1.1);
   }
   100% {
-    stroke: abstracts.$color-secondary; 
+    stroke: abstracts.$color-primary; 
     stroke-dashoffset: 1550;
-    stroke-width: 10; //stroke très léger pour éviter de voir la bordure noire du début de l'animation
+    stroke-width: 1; //stroke très léger pour éviter de voir la bordure noire du début de l'animation
     fill: url(#grad1);
     transform: scale(1);
   }

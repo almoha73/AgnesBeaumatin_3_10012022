@@ -15,6 +15,7 @@
     transform: scale(1.1);
   }
   80% {
+    stroke-width: 1;
     stroke-dashoffset: 1000;
     fill: url(#grad1);//appel du linear gradient du html par son ID
     transform: scale(1.3);
@@ -27,7 +28,7 @@
   100% {
     stroke: abstracts.$color-primary; 
     stroke-dashoffset: 1550;
-    stroke-width: 1; //stroke très léger pour éviter de voir la bordure noire du début de l'animation
+    stroke-width: 1; //stroke très léger pour éviter de voir la bordure
     fill: url(#grad1);
     transform: scale(1);
   }

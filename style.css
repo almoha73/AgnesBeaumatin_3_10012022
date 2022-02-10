@@ -199,6 +199,7 @@ header.header__homepage h3 {
 }
 .restaurant-menu .icon svg {
   overflow: visible;
+  width: 32px;
 }
 .restaurant-menu .icon path {
   stroke-dashoffset: 0;
@@ -506,6 +507,7 @@ aside a {
 }
 .restaurant-card__text .icon svg {
   overflow: visible;
+  width: 32px;
 }
 .restaurant-card__text .icon path {
   stroke-dashoffset: 0;
@@ -866,6 +868,7 @@ footer a {
     transform: scale(1.1);
   }
   80% {
+    stroke-width: 1;
     stroke-dashoffset: 1000;
     fill: url(#grad1);
     transform: scale(1.3);

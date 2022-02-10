@@ -78,14 +78,6 @@
           transform-origin: center;// le coeur va pulser sans se décaler
         }
       
-        // .heart-background { //le deuxième coeur est positionné sur le premier
-        //   position: absolute;
-        //   left: 0;
-        //   right: 0;
-        //   z-index: -1;
-        //   stroke: none;
-        // }
-      
         .heart-main:hover path {
           animation: stroke-animation 0.7s linear forwards;
         }

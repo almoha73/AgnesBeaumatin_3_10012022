@@ -45,6 +45,7 @@
     color: variables.$color-white;
     font-size: 1.6vh;
     font-weight: 500;
+    cursor: pointer;
     box-shadow: 0px 3px 12px -2px variables.$color-secondary;
     &:hover{
         opacity: 0.9;
@@ -89,6 +90,6 @@
           animation: stroke-animation 0.7s linear forwards;
         }
       
-      }
+    }
 }
 

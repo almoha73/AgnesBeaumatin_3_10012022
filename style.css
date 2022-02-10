@@ -297,6 +297,9 @@ aside h2 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+aside .aside__choice {
+  margin-left: 10px;
+}
 aside .aside__choice::before {
   content: "1";
 }
@@ -778,6 +781,7 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
   color: #fff;
   font-size: 1.6vh;
   font-weight: 500;
+  cursor: pointer;
   box-shadow: 0px 3px 12px -2px #9356dc;
   width: 200px;
   text-align: center;

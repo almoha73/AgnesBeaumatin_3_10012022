@@ -191,7 +191,7 @@ header.header__homepage h3 {
 }
 .restaurant-menu .icon {
   fill: transparent;
-  stroke: black;
+  stroke: #000;
   stroke-width: 40;
   cursor: pointer;
   position: relative;
@@ -211,13 +211,6 @@ header.header__homepage h3 {
   stroke-dashoffset: 0;
   stroke-dasharray: 1550;
   transform-origin: center;
-}
-.restaurant-menu .icon .heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
 }
 .restaurant-menu .icon .heart-main:hover path {
   animation: stroke-animation 0.7s linear forwards;
@@ -512,7 +505,7 @@ aside a {
 }
 .restaurant-card__text .icon {
   fill: transparent;
-  stroke: black;
+  stroke: #000;
   stroke-width: 40;
   cursor: pointer;
   position: relative;
@@ -532,13 +525,6 @@ aside a {
   stroke-dashoffset: 0;
   stroke-dasharray: 1550;
   transform-origin: center;
-}
-.restaurant-card__text .icon .heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
 }
 .restaurant-card__text .icon .heart-main:hover path {
   animation: stroke-animation 0.7s linear forwards;

@@ -11,10 +11,11 @@
 }
   .loader {
     @include abstracts.widthHeight(250px, 250px);  
-    div {
-      height: 100%;
-    }
+      div {
+        height: 100%;
+      }
   }
+  
   .loader, .loader div {
     border-radius: 50%;
     padding: 10px;

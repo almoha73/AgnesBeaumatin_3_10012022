@@ -672,8 +672,6 @@ article:hover .check {
 }
 article:hover .fa-check-circle {
   transform: rotate(360deg);
-  transition-delay: 2s;
-  transition: transform 0.5s ease-in;
 }
 article .entrees {
   animation: decalage_plats 2s 100ms linear both;
@@ -701,13 +699,12 @@ article .plats, article .entrees, article .desserts {
   white-space: nowrap;
   padding-left: 10px;
 }
-article .plats p, article .entrees p, article .desserts p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-article .plats > h5, article .entrees > h5, article .desserts > h5 {
+article .plats h5, article .entrees h5, article .desserts h5 {
+  width: 100%;
   font-weight: bold;
   font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 article .plats .plat, article .entrees .plat, article .desserts .plat {
   display: flex;
@@ -719,6 +716,8 @@ article .plats .plat, article .entrees .plat, article .desserts .plat {
 }
 article .plats .plat > p, article .entrees .plat > p, article .desserts .plat > p {
   font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 article .plats .plat span, article .entrees .plat span, article .desserts .plat span {
   padding: 0 1em 0 1em;
@@ -743,7 +742,7 @@ article .plats .plat span, article .entrees .plat span, article .desserts .plat 
 }
 .check .fa-check-circle {
   transform: rotate(0deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in;
 }
 
 .header__button {

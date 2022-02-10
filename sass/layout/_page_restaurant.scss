@@ -62,8 +62,6 @@ article{
     }
     &:hover .fa-check-circle{
         transform: rotate(360deg);
-        transition-delay: 2s;
-        transition: transform .5s ease-in;
     }
     & .entrees{
         animation: decalage_plats 2s 100ms linear both;
@@ -86,13 +84,12 @@ article{
         overflow: hidden;
         white-space: nowrap;
         padding-left: 10px;
-        & p{
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        & > h5{
+        h5{
+            width: 100%;
             font-weight: bold;
             font-size: 0.9em;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         & .plat{
@@ -100,13 +97,16 @@ article{
             width: 100%;
             & > p{
                 font-size: 0.8em;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             & span{
                 padding: 0 1em 0 1em;
                 font-weight: 900;
                 font-size: 0.9em;
-                }
+                
             }
+        }
     }
 }
 .check{
@@ -120,7 +120,7 @@ article{
     cursor: pointer;
     .fa-check-circle {
         transform: rotate(0deg);
-        transition: transform 0.5s ease;
+        transition: transform 0.5s ease-in;
     }
 }
         

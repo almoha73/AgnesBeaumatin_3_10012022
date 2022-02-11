@@ -65,14 +65,11 @@ article{
     }
     & .entrees{
         animation: decalage_plats 2s 100ms linear both;
-        opacity: 0;
     }
     & .plats{
-        opacity: 0;
         animation: decalage_plats 2s 500ms linear both;
     }
     & .desserts{
-        opacity: 0;
         animation: decalage_plats 2s 1s linear both;
     }
 

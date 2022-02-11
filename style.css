@@ -284,9 +284,6 @@ aside h2 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-aside .aside__choice {
-  margin-left: 10px;
-}
 aside .aside__choice::before {
   content: "1";
 }
@@ -675,14 +672,11 @@ article:hover .fa-check-circle {
 }
 article .entrees {
   animation: decalage_plats 2s 100ms linear both;
-  opacity: 0;
 }
 article .plats {
-  opacity: 0;
   animation: decalage_plats 2s 500ms linear both;
 }
 article .desserts {
-  opacity: 0;
   animation: decalage_plats 2s 1s linear both;
 }
 article .plats, article .entrees, article .desserts {
@@ -912,14 +906,6 @@ footer a {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@keyframes check_translate {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-67px);
   }
 }
 @keyframes plat_dimension {
